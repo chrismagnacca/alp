@@ -29,19 +29,19 @@ namespace Alp
                 "~/Content/Body.css"
                 ));
 
-            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
-                        "~/Content/themes/base/jquery.ui.core.css",
-                        "~/Content/themes/base/jquery.ui.resizable.css",
-                        "~/Content/themes/base/jquery.ui.selectable.css",
-                        "~/Content/themes/base/jquery.ui.accordion.css",
-                        "~/Content/themes/base/jquery.ui.autocomplete.css",
-                        "~/Content/themes/base/jquery.ui.button.css",
-                        "~/Content/themes/base/jquery.ui.dialog.css",
-                        "~/Content/themes/base/jquery.ui.slider.css",
-                        "~/Content/themes/base/jquery.ui.tabs.css",
-                        "~/Content/themes/base/jquery.ui.datepicker.css",
-                        "~/Content/themes/base/jquery.ui.progressbar.css",
-                        "~/Content/themes/base/jquery.ui.theme.css"));
+            bundles.Add(new StyleBundle("~/Content/Themes/base/css").Include(
+                        "~/Content/Themes/base/jquery.ui.core.css",
+                        "~/Content/Themes/base/jquery.ui.resizable.css",
+                        "~/Content/Themes/base/jquery.ui.selectable.css",
+                        "~/Content/Themes/base/jquery.ui.accordion.css",
+                        "~/Content/Themes/base/jquery.ui.autocomplete.css",
+                        "~/Content/Themes/base/jquery.ui.button.css",
+                        "~/Content/Themes/base/jquery.ui.dialog.css",
+                        "~/Content/Themes/base/jquery.ui.slider.css",
+                        "~/Content/Themes/base/jquery.ui.tabs.css",
+                        "~/Content/Themes/base/jquery.ui.datepicker.css",
+                        "~/Content/Themes/base/jquery.ui.progressbar.css",
+                        "~/Content/Themes/base/jquery.ui.theme.css"));
         }
     }
 }

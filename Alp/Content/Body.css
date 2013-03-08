@@ -2,22 +2,23 @@
 body {
     height: 100%;
     font-size: 1.00em; /*  16px , 12pt */
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    font-family: 'Open Sans', Verdana, Helvetica, Sans-Serif;
     color: #232323;
-    background-color: #5a97c9;
+    background-color: #2E6A9E;
 }
 
 .container {
     height: 50em;
-
-
     max-width: 70.000em; /* 800 px */
     min-height: 100%;
     margin: 0 auto;
-    padding: 0 1.250em 2.500em;
-    background-color: #FFF;
+    padding: 0;
+    background-color: #2E6A9E;
 }
 
 .content {
     padding-top: 1.875em;
+    width: 80%;
+    margin: 1.250em auto;
+    background-color: #FFF;
 }

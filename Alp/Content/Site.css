@@ -1,4 +1,12 @@
-﻿header, footer, nav, section {
+﻿@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: local('~Content/Fonts/OpenSans/'),
+       url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+header, footer, nav, section {
     display: block;
 }
 
@@ -8,7 +16,9 @@ html, body, h1, ul, li {
 }
 
 header {
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    font-family: 'Open Sans', Verdana, Helvetica, Sans-Serif;
     padding-top: 1.00em; /* 16px */
+    padding-left: 1.000em;
     padding-bottom: 1.000em; /* 16px */
+    color: #FFF;
 }

@@ -15,18 +15,19 @@
 <body>
     <div class="container">
         <header>
-            <h1> Acension Lutheran Preschool & Extended Care</h1>
+            <h1> Acension Lutheran Preschool</h1>
         </header>
 
         <nav class="nav">
             <ul>
-		        <li class="current"><a href="#">Home</a></li>
+		        <li class="current"><a href="@Url.Action("Index","Home")">Home</a></li>
 		        <li><a href="#">Our Mission & Program</a></li>
 		        <li><a href="#">Staff & Faculty</a></li>
 		        <li><a href="#">Registration Information</a></li>
-		        <li><a href="#">Location & Directions</a></li>
+		        <li><a href="@Url.Action("LocationAndDirections","Home")">Location & Directions</a></li>
 	        </ul>
         </nav>
+
         <div class="content">
             @RenderBody()
         </div>
