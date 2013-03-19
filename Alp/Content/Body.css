@@ -9,7 +9,7 @@ body {
 
 .container {
     height: 50em;
-    max-width: 70.000em; /* 800 px */
+    max-width: 70.000em; /* 1120 px */
     min-height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -17,8 +17,52 @@ body {
 }
 
 .content {
-    padding-top: 1.875em;
+    background-color: #3789d0;
     width: 80%;
     margin: 1.250em auto;
+    height: 32.500em;
+    max-height: 32.500em;
+    border-radius: 0.313em;
+    border: solid 0.063em #FFF;
+}
+
+.location-and-directions {
+    float: left;
+    width: 17.500em;
+    max-width: 17.500em;
+    padding-top: 1.250em;
+    padding-bottom: 1.250em;
+    padding-right: 1.250em;
+    padding-left: 1.250em;
+    color: #2E6A9E; 
+    
+}
+
+.google-map {
+    float: right;
+    width: 32.500em;
+    max-width: 35.000em;
+    height: 27.00em;
+    margin-top: 1.250em;
+    margin-right: 1.250em;
+    margin-bottom: 1.250em;
+}
+
+.google-map iframe {
+    border: solid 0.063em;
+
+}
+
+.white-box {
+    padding: 0.625em;
     background-color: #FFF;
+    border-radius: 0.313em;
+    height: 28.75em;
+    max-height: 28.75em;
+
+}
+
+.mailing {
+    font-weight: bold;
+    margin: 0 auto;
 }

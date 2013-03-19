@@ -22,3 +22,7 @@ header {
     padding-bottom: 1.000em; /* 16px */
     color: #FFF;
 }
+
+h4 {
+    margin-top: 0.625em;
+}
