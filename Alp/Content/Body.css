@@ -48,9 +48,13 @@ body {
     margin-bottom: 1.250em;
 }
 
-.google-map iframe {
-    border: solid 0.063em;
-
+#map-canvas {
+    width: 100%;
+    height: 100%;
+    border-left: solid 0.126em #000;
+    border-right: solid 0.126em #000;
+    border-top: solid 0.063em #000;
+    border-bottom: solid 0.063em #000;
 }
 
 .white-box {

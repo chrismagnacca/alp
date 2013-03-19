@@ -1,6 +1,45 @@
 ﻿@{
     ViewBag.Title = "Location & Directions";
 }
+
+
+<script type="text/javascript">
+    function initialize() {
+        var myLatLng = new google.maps.LatLng(40.060307, -82.98064);
+        var mapLatLng =new google.maps.LatLng(40.069862, -82.980423); 
+
+        var mapOptions = {
+            center: mapLatLng,
+            zoom: 14,
+          
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+
+        var contentString = "Ascension Lutheran Preschool<br/>" +
+                            "1479 Morse Road <br />" + 
+                            "Columbus, OH 43229";
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: "Hello World!"
+        });
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, marker);
+        });
+
+
+        marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 <div class="location-and-directions">
     <div class="white-box">
         <h4>Directions</h4>
@@ -15,6 +54,5 @@
 </div>
 
 <div class="google-map white-box">
-    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Ascension+Lutheran+Pre-School,+1479+Morse+Road,+Columbus,+OH+43229&amp;sll=40.069862,-82.980423&amp;sspn=0.045912,0.090895&amp;ie=UTF8&amp;hq=Ascension+Lutheran+Pre-School,&amp;hnear=1479+Morse+Rd,+Columbus,+Franklin,+Ohio+43229&amp;t=m&amp;cid=17007961672945084666&amp;ll=40.082537,-82.974586&amp;spn=0.063044,0.109863&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe>
-    <br />
+    <div id="map-canvas"></div>
 </div>
