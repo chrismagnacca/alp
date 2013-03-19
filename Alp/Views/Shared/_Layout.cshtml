@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/modernizr")
-
     <!--[if lt IE 10]>
 	<script src="@Url.Content("~/Scripts/css3-mediaqueries.js")"></script>
 	<script src="@Url.Content("~/Scripts/html5.js")"></script>
@@ -20,16 +20,22 @@
 
         <nav class="nav">
             <ul>
-		        <li class="current"><a href="@Url.Action("Index","Home")">Home</a></li>
-		        <li><a href="#">Our Mission & Program</a></li>
+		        <li><a href="@Url.Action("Index","Home")">Home</a></li>
+		        <li><a href="#">Our Program</a></li>
 		        <li><a href="#">Staff & Faculty</a></li>
-		        <li><a href="#">Registration Information</a></li>
-		        <li><a href="@Url.Action("LocationAndDirections","Home")">Location & Directions</a></li>
+		        <li><a href="#">Registration</a></li>
+                <li><a href="#">Event Calendar</a></li>
+		        <li><a href="@Url.Action("Directions","Home")">Directions</a></li>
+                <li><a href="#">Contact Us</a></li>
 	        </ul>
         </nav>
 
         <div class="content">
             @RenderBody()
+        </div>
+
+        <div class="footer">
+            ascensionpreschool@hotmail.com | 1479 Morse Rd. Columbus, OH 43229  | Office: (614) 268-2010 | Fax: (614) 268-1164 
         </div>
     </div>
 

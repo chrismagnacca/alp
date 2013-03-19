@@ -17,9 +17,9 @@ namespace Alp.Controllers
         }
 
         //
-        // GET: /Home/Details/
+        // GET: /Home/Directions/
 
-        public ActionResult LocationAndDirections()
+        public ActionResult Directions()
         {
             return View();
         }

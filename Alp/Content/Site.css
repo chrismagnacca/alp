@@ -26,3 +26,8 @@ header {
 h4 {
     margin-top: 0.625em;
 }
+
+.footer {
+    max-width: 80%;
+    margin: 0 auto;
+}
