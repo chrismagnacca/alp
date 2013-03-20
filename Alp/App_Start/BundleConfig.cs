@@ -27,7 +27,8 @@ namespace Alp
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/Site.css",
                 "~/Content/Navigation.css",
-                "~/Content/Body.css"
+                "~/Content/Body.css",
+                "~/Content/Index.css"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/Themes/base/css").Include(

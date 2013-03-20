@@ -11,6 +11,7 @@ body {
     height: 50em;
     max-width: 70.000em; /* 1120 px */
     min-height: 100%;
+    max-height: 50em;
     margin: 0 auto;
     padding: 0;
     background-color: #2E6A9E;
@@ -20,8 +21,8 @@ body {
     background-color: #3789d0;
     width: 80%;
     margin: 1.250em auto;
-    height: 32.500em;
-    max-height: 32.500em;
+    height: 100%;
+    max-height: 50.000em;
     border-radius: 0.313em;
     border: solid 0.063em #FFF;
 }

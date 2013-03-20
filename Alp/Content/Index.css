@@ -1,0 +1,64 @@
+﻿.picture-carosel {
+    width: 32.500em;
+    height: 20em;
+    background: #FFF;
+    margin-left: 1.250em;
+    margin-top:  1.250em;
+    padding:  1.250em;
+    border-radius: 0.313em;
+    float: left;
+}
+
+.grid-content {
+    background-color: #808080;
+    border-radius: 0.313em;
+    height:100%;
+    width:100%;
+    margin: 0 0 0 0;
+}
+
+.right-container {
+    width: 15em;
+    height: 20em;
+    background-color: #FFF;
+    border-radius: 0.313em;
+    padding:  1.250em;
+    margin-right:  1.250em;
+    margin-top:  1.250em;
+    float: right;
+}
+
+.bottom-grid {
+    width: 91.25%;
+    max-width: inherit;
+    max-height: inherit;
+    min-height: inherit;
+    margin: 1.250em;
+    float: left;
+    padding: 1.250em;
+    background-color: #FFF;
+    border-radius: 0.313em;
+    height: 42.5%;
+}
+
+.grid-item {
+    margin: 0.250em;
+    background-color: #808080;
+    min-width: 31%;
+    float: left;
+    border-radius: 0.313em;
+    height: 100%;
+}
+
+.grid-left {
+    margin-left: 0.250em;
+}
+
+.grid-center {
+    margin-left: 1.250em;
+    margin-right: 1.250em;
+}
+
+.grid-right {
+    margin-right: 0.250em;
+}
