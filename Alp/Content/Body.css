@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    height: 50em;
+    height: 32.500em;
     max-width: 70.000em; /* 1120 px */
     min-height: 100%;
     max-height: 50em;
@@ -18,13 +18,14 @@ body {
 }
 
 .content {
-    background-color: #3789d0;
+
     width: 80%;
     margin: 1.250em auto;
-    height: 100%;
+    height: auto;
+    min-height: 47.000em;
     max-height: 50.000em;
     border-radius: 0.313em;
-    border: solid 0.063em #FFF;
+
 }
 
 .location-and-directions {
@@ -65,6 +66,10 @@ body {
     height: 28.75em;
     max-height: 28.75em;
 
+}
+
+.map-text {
+    text-align: center;
 }
 
 .mailing {

@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        /* Prevents slides from flashing */
+        #slides {
+          display:none;
+        }
+    </style>
+    
+    <script type="text/javascript" src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.slides.min.js"></script>
     <!--[if lt IE 10]>
 	<script src="@Url.Content("~/Scripts/css3-mediaqueries.js")"></script>
 	<script src="@Url.Content("~/Scripts/html5.js")"></script>
@@ -37,11 +45,12 @@
         <div class="footer">
             ascensionpreschool@hotmail.com | 1479 Morse Rd. Columbus, OH 43229  | Office: (614) 268-2010 | Fax: (614) 268-1164 
         </div>
+        <br />
+        <br />
+        <br />
     </div>
 
 
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
 
 </body>
 </html>

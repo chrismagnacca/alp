@@ -25,9 +25,11 @@ header {
 
 h4 {
     margin-top: 0.625em;
+    text-align: center;
 }
 
 .footer {
     max-width: 80%;
     margin: 0 auto;
+    color: #FFF;
 }
