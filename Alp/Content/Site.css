@@ -13,6 +13,7 @@ header, footer, nav, section {
 html, body, h1, ul, li { 
     margin:0;
     padding:0;
+    color: #2E6A9E; 
 }
 
 header {
@@ -26,10 +27,11 @@ header {
 h4 {
     margin-top: 0.125em;
     text-align: center;
+    color: #FFF;
 }
 
 .footer {
-    max-width: 80%;
+    padding-top: 0.625em;
     margin: 0 auto;
-    color: #FFF;
+    color: #2E6A9E; 
 }

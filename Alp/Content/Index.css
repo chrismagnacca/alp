@@ -4,6 +4,7 @@
     margin-left: 1.250em;
     margin-top:  1.250em;
     float: left;
+    border-radius: 0.313em;
 }
 
 img {
@@ -27,17 +28,18 @@ img {
 .grid-text{
     font-size: 0.9em;
     text-align: center;
+    color: #FFF;
 }
 
 .right-container {
     width: 15em;
     height: 20em;
-    background-color: #FFF;
     border-radius: 0.313em;
     padding:  1.250em;
     margin-right:  1.250em;
     margin-top:  1.250em;
     float: right;
+    background-image: url('/Content/Images/grey_wash_wall_@2X.png');    
 }
 
 .bottom-grid {
@@ -51,6 +53,7 @@ img {
     background-color: #FFF;
     border-radius: 0.313em;
     height: 40%;
+    background-image: url('/Content/Images/grey_wash_wall_@2X.png');    
 }
 
 .grid-item {
@@ -60,7 +63,7 @@ img {
     float: left;
     border-radius: 0.313em;
     height: 100%;
-    color: #2E6A9E; 
+    color: #FFF; 
 }
 
 .grid-left {
