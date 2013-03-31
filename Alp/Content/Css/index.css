@@ -1,0 +1,18 @@
+﻿.picture-carousel {
+    padding: 1.250em 0;
+    padding-top: 2.5em;
+    padding-right: 1.250em;
+    padding-bottom: 1.250em;
+    padding-left: 1.250em;
+    max-height: 70%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+div#index-container {
+    background-color: #808080;
+}
+
+div#footer-container {
+    background-color: #FFFFFF;
+}
