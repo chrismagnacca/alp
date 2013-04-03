@@ -2,27 +2,23 @@
     ViewBag.Title = "Ascension Lutheran Preschool & Extended Care";
 }
 
-<script>
-    $(function () {
-        $("#slides").slidesjs({
-            width: 560,
-            height: 360,
-            start: 1,
-            play: {
-                active: false,
-                effect: "slide",
-                interval: 5000,
-                auto: true,
-                pauseOnHover: true,
-                restartDelay: 2500,
-            }
-        });
-    });
-</script>
 <script type="text/javascript" src="~/Scripts/index.js"></script>
+
+<div class="container main-title">
+    <div class="row">
+        <div class="span12">
+            <h2>Ascension Lutheran Preschool & Extended Care</h2>
+            <h5 class="mission">
+                We provide physical, social, emotional, 
+                and spritual opportunities for children to grow in a safe, healthy, and positive environment.
+            </h5>
+        </div>
+    </div>
+</div>
+
 <div id="index-container">
-    <div class="container_12">
-        <div class="grid_12">
+    <div class="row">
+        <div class="span12">
             <div id="slides" class="picture-carousel ">
                 <img src="~/Content/Images/slide-1.jpg">
                 <img src="~/Content/Images/slide-2.jpg">
@@ -31,18 +27,37 @@
                 <img src="~/Content/Images/slide-5.jpg">
             </div>
         </div>  
-        <div class="clear"></div>   
     </div>
-    <div class="clear"></div>   
 </div>
 
-<div id="footer-container">
-    <div class="container_12">
-        <div class="grid_12" id="footer">  
-            <div class="grid_4 alpha">GRID_4 ALPHA</div>  
-            <div class="grid_4"> GRID_4 MIDDLE</div>  
-            <div class="grid_4 omega">GRID_4 OMEGA</div>  
-        </div> 
-        <div class="clear"></div>   
+<div id="index-footer-container">
+    <div class="row footer"> 
+        <div class="span4">
+            <h4>Hours of Operation</h4>
+            September - May <br /><br />
+            Monday  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7:30 AM - 5:30 PM <br /><br />
+            Tuesday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7:30 AM - 5:30 PM <br /><br />
+            Wednesday &nbsp; 7:30 AM - 5:30 PM  <br /><br />
+            Thursday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7:30 AM - 5:30 PM  <br /><br />
+            Friday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7:30 AM - 5:30 PM <br /><br />
+        </div>  
+        <div class="span4">
+            <h4>vestibulum id tempor</h4>
+            In tempor semper libero, et lacinia diam tincidunt molestie. 
+            Curabitur sed lectus metus, in pulvinar mauris. 
+            Curabitur mauris tortor, malesuada id viverra et, 
+            aliquet vel sem. Aenean a tincidunt tortor. 
+            Quisque vitae massa dui. Donec varius bibendum ullamcorper. 
+            Pellentesque sed posuere purus. Sed consectetur ultricies malesuada. Quisque e
+        </div>  
+        <div class="span4">
+            <h4>Quisque risus enim</h4>
+            Phasellus luctus mi nec dui interdum sed ultricies libero mollis. 
+            Integer vel ipsum in felis sagittis posuere et quis diam. 
+            Mauris volutpat mauris luctus purus semper rutrum. Duis tellus urna, 
+            vehicula quis lacinia ut, vehicula nec urna. 
+            Donec at lacus vitae tellus porta commodo. In ut laoreet purus. 
+            Fusce justo quam, dictum ut volutpat ac, tincidunt ut nibh.
+        </div>  
     </div>
 </div>

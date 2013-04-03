@@ -7,13 +7,6 @@
 
     @Styles.Render("~/Content/css")
 
-     <style>
-         /* Prevents slides from flashing */
-         #slides {
-             display:none;
-         }
-     </style>
-
     <script type="text/javascript" src="~/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.slides.min.js"></script>
 
@@ -23,9 +16,9 @@
     <![endif]-->
 </head>
 <body>
-    <div class="container_12" id="main-container">
-        <div class="grid_12" id="navbar">
-            <ul>  
+    <div class="row navbar main-container">
+        <div class="navbar-inner" id="navbar">
+            <ul class="nav">  
                 <li><a href="@Url.Action("Index","Home")">Home</a></li>
 		        <li><a href="#">Our Program</a></li>
 		        <li><a href="#">Staff & Faculty</a></li>
@@ -35,10 +28,15 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>  
         </div>  
-        <div class="clear"><!--clear css--></div>
     </div>
-              
-    @RenderBody()
-
+    
+    <div class="container">
+        @RenderBody()
+        <div class="footer">
+            ascensionpreschool@hotmail.com | 1479 Morse Rd. Columbus, OH 43229 | Office: (614) 268-2010 | Fax: (614) 268-1164
+        </div> 
+    </div>
+    
+    
 </body>
 </html>

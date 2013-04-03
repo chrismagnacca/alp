@@ -1,18 +1,68 @@
 ﻿.picture-carousel {
     padding: 1.250em 0;
-    padding-top: 2.5em;
+    padding-top: 1.5em;
     padding-right: 1.250em;
     padding-bottom: 1.250em;
     padding-left: 1.250em;
-    max-height: 70%;
-    max-width: 80%;
     margin: 0 auto;
 }
 
-div#index-container {
-    background-color: #808080;
+div.slidesjs-container {
+    border-radius: 0.313em;
 }
 
-div#footer-container {
-    background-color: #FFFFFF;
+div#footer {
+    text-align: center;
 }
+
+h5.mission {
+    color: #717070;
+}
+
+/* SlidesJS CSS */
+#slides {
+  display:none;
+}
+
+#slides .slidesjs-container {
+  margin-bottom:10px;
+}
+
+#slides .slidesjs-previous {
+  margin-right: 5px;
+  float:left;
+}
+
+#slides .slidesjs-next {
+    margin-right: 5px;
+    float: right;
+}
+
+.slidesjs-pagination {
+    margin: 0 45%;
+    list-style: none;
+}
+
+.slidesjs-pagination li {
+    float: left;
+    margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 13px;
+    height: 0;
+    padding-top: 13px;
+    background-image: url('../Images/pagination.png');
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
+}
+
+.slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px }
+
+.slidesjs-pagination li a:hover { background-position: 0 -26px }
+
+#slides a:link, #slides a:visited { color: #333 }
+
+#slides a:hover, #slides a:active { color: #9e2020 }

@@ -129,19 +129,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Css\960.css" />
+    <Content Include="Content\Css\bootstrap-responsive.css" />
+    <Content Include="Content\Css\bootstrap-responsive-min.css" />
+    <Content Include="Content\Css\bootstrap.css" />
+    <Content Include="Content\Css\bootstrap-min.css" />
     <Content Include="Content\Css\font-awesome-ie7-min.css" />
     <Content Include="Content\Css\font-awesome-min.css" />
+    <Content Include="Content\Css\normalize.css" />
     <Content Include="Content\Css\site.css" />
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\glyphicons-halflings-white.png" />
+    <Content Include="Content\Images\glyphicons-halflings.png" />
+    <Content Include="Content\Images\pagination.png" />
     <Content Include="Content\Images\slide-1.jpg" />
     <Content Include="Content\Images\slide-2.jpg" />
     <Content Include="Content\Images\slide-3.jpg" />
     <Content Include="Content\Images\slide-4.jpg" />
     <Content Include="Content\Images\slide-5.jpg" />
     <Content Include="Content\Css\index.css" />
-    <Content Include="Content\Css\reset.css" />
-    <Content Include="Content\Css\text.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\css3-mediaqueries.js" />
     <Content Include="Scripts\google-maps.js" />
     <Content Include="Scripts\html5.js" />
