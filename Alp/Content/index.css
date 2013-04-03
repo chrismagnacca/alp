@@ -52,7 +52,7 @@ h5.mission {
     width: 13px;
     height: 0;
     padding-top: 13px;
-    background-image: url('../Images/pagination.png');
+    background-image: url('/Content/Images/pagination.png');
     background-position: 0 0;
     float: left;
     overflow: hidden;

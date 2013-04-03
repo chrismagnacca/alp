@@ -24,12 +24,12 @@ namespace Alp
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/Css/bootstrap-responsive-min.css",
-                "~/Content/Css/bootstrap-min.css",
-                "~/Content/Css/font-awesome-min.css",
-                "~/Content/Css/normalize.css",
-                "~/Content/Css/site.css",
-                "~/Content/Css/index.css"
+                "~/Content/bootstrap-responsive-min.css",
+                "~/Content/bootstrap-min.css",
+                "~/Content/font-awesome-min.css",
+                "~/Content/normalize.css",
+                "~/Content/site.css",
+                "~/Content/index.css"
                 ));
 
         }
