@@ -7,6 +7,11 @@
     margin: 0 auto;
 }
 
+#index-footer {
+    width: 100%;
+    /*background: #EEEEEE;*/
+}
+
 div.slidesjs-container {
     border-radius: 0.313em;
 }

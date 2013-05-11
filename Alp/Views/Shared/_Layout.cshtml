@@ -18,25 +18,31 @@
 <body>
     <div class="row navbar main-container">
         <div class="navbar-inner" id="navbar">
-            <ul class="nav">  
-                <li><a href="@Url.Action("Index","Home")">Home</a></li>
-		        <li><a href="#">Our Program</a></li>
-		        <li><a href="#">Staff & Faculty</a></li>
-		        <li><a href="#">Registration</a></li>
-                <li><a href="#">Event Calendar</a></li>
-		        <li><a href="@Url.Action("Directions","Home")">Directions</a></li>
+            <ul class="nav">
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("StaffAndFaculty", "Home")">Staff & Faculty</a></li>
+                <li><a href="#">Registration Information</a></li>
+                <li><a href="#">School Calendar</a></li>
+                <li><a href="@Url.Action("Directions", "Home")">Directions</a></li>
                 <li><a href="#">Contact Us</a></li>
-            </ul>  
-        </div>  
+            </ul>
+        </div>
     </div>
     
-    <div class="container">
-        @RenderBody()
-        <div class="footer">
-            ascensionpreschool@hotmail.com | 1479 Morse Rd. Columbus, OH 43229 | Office: (614) 268-2010 | Fax: (614) 268-1164
-        </div> 
+    @RenderBody()
+   
+    <div class="footer-container">
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="footer span12">
+                    ascensionpreschool@hotmail.com | 1479 Morse Rd. Columbus, OH 43229 | Office: (614) 268-2010 | Fax: (614) 268-1164
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
     </div>
-    
-    
 </body>
 </html>

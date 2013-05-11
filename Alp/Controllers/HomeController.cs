@@ -25,6 +25,14 @@ namespace Alp.Controllers
         }
 
         //
+        // GET: /Home/StaffAndFaculty
+
+        public ActionResult StaffAndFaculty()
+        {
+            return View();
+        }
+
+        //
         // GET: /Home/Create
 
         public ActionResult Create()
