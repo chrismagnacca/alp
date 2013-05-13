@@ -5,6 +5,8 @@
     padding-bottom: 1.250em;
     padding-left: 1.250em;
     margin: 0 auto;
+    max-width: 67.500em;
+    max-height: 47.000em;
 }
 
 #index-footer {
@@ -20,8 +22,13 @@ div#footer {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 h5.mission {
     color: #717070;
+    text-align: center;
 }
 
 #slides {
