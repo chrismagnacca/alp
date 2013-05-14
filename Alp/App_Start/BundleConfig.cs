@@ -29,7 +29,8 @@ namespace Alp
                 "~/Content/font-awesome-min.css",
                 "~/Content/normalize.css",
                 "~/Content/site.css",
-                "~/Content/index.css"
+                "~/Content/index.css",
+                "~/Content/staffandfaculty.css"
                 ));
 
         }

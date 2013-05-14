@@ -135,6 +135,7 @@
     <Content Include="Content\bootstrap-min.css" />
     <Content Include="Content\font-awesome-ie7-min.css" />
     <Content Include="Content\font-awesome-min.css" />
+    <Content Include="Content\Images\bio.png" />
     <Content Include="Content\Images\slide-1.jpg" />
     <Content Include="Content\Images\subtle-light-patterns.jpg" />
     <Content Include="Content\normalize.css" />
@@ -149,6 +150,7 @@
     <Content Include="Content\Images\slide-5.jpg" />
     <Content Include="Content\Images\slide-6.jpg" />
     <Content Include="Content\index.css" />
+    <Content Include="Content\staffandfaculty.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\css3-mediaqueries.js" />
@@ -176,6 +178,7 @@
     <Content Include="Scripts\jquery.slides.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\staffandfaculty.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
