@@ -3,7 +3,12 @@
 }
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC07QHkm7xFRu6X9stoRDifMgdxudCB-0&sensor=false"></script>
 <script type="text/javascript" src="~/Scripts/google-maps.js"></script>
-
+<style>
+    /*bootstrap 2.0 issue*/
+    #map-canvas img {
+        max-width: none;
+    }
+</style>
 
 <div class="map-container">
     <div class="container">
@@ -29,7 +34,7 @@
             </div>
 
             <div class="google-map span8">
-                <div id="map-canvas" style="width: 660px; height: 560px"></div>
+                <div id="map-canvas" style="width: 770px; height: 560px;"></div>
             </div>
         </div>
     </div>

@@ -135,17 +135,19 @@
     <Content Include="Content\bootstrap-min.css" />
     <Content Include="Content\font-awesome-ie7-min.css" />
     <Content Include="Content\font-awesome-min.css" />
+    <Content Include="Content\Images\slide-1.jpg" />
+    <Content Include="Content\Images\subtle-light-patterns.jpg" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\site.css" />
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\glyphicons-halflings-white.png" />
     <Content Include="Content\Images\glyphicons-halflings.png" />
     <Content Include="Content\Images\pagination.png" />
-    <Content Include="Content\Images\slide-1.jpg" />
     <Content Include="Content\Images\slide-2.jpg" />
     <Content Include="Content\Images\slide-3.jpg" />
     <Content Include="Content\Images\slide-4.jpg" />
     <Content Include="Content\Images\slide-5.jpg" />
+    <Content Include="Content\Images\slide-6.jpg" />
     <Content Include="Content\index.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -190,6 +192,7 @@
     <Content Include="Views\Home\Directions.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\StaffAndFaculty.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -32,6 +32,14 @@ namespace Alp.Controllers
             return View();
         }
 
+        // 
+        // GET: /Home/ContactUs
+        
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
+
         //
         // GET: /Home/Create
 

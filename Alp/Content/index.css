@@ -1,17 +1,24 @@
-﻿.picture-carousel {
+﻿#index-slideshow {
+    background: url('/Content/Images/subtle-light-patterns.jpg');
+}
+
+.picture-carousel {
     padding: 1.250em 0;
     padding-top: 1.5em;
     padding-right: 1.250em;
     padding-bottom: 1.250em;
     padding-left: 1.250em;
     margin: 0 auto;
-    max-width: 67.500em;
-    max-height: 47.000em;
+    max-width: 64.000em;
+    max-height: 48.000em;
+}
+
+.line-break {
+    border-bottom: 1px solid #d9d8d8;
 }
 
 #index-footer {
     width: 100%;
-    /*background: #EEEEEE;*/
 }
 
 div.slidesjs-container {
@@ -50,7 +57,7 @@ h5.mission {
 }
 
 .slidesjs-pagination {
-    margin: 0 45%;
+    margin: 0 44%;
     list-style: none;
 }
 

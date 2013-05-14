@@ -11,10 +11,9 @@ div.spacer {
     height: 1em;
 }
 
-div.main-container, div.main-title {
+div#main-title {
     font-family: 'Open Sans', Verdana, sans-serif;
-    text-align: center;
-}
+   }
 
 a, a:visited, a:hover, a:active {
     color: inherit;
@@ -22,6 +21,7 @@ a, a:visited, a:hover, a:active {
 
 .navbar{
     margin: 0 auto;
+    text-align: center;
 }
 
 .navbar .nav, .navbar .nav > li {
@@ -45,3 +45,4 @@ div.footer {
     margin-bottom: 1.250em;
     text-align: center;
 }
+
