@@ -1,5 +1,5 @@
 ﻿.bio-pic {
-    padding: 0.750em 0.750em;
+    padding: 0.0625em 0.0625em;
     max-width: 140px;
     max-height: 132px;
 }
@@ -7,4 +7,11 @@
 .bio-wrapper {
     opacity: 0.4;
     filter: alpha(opacity=40); /* IE */
+}
+
+#focused-image {
+    max-width: 400px;
+    max-height: 300px;
+    width: 400px;
+    height: 300px;
 }
