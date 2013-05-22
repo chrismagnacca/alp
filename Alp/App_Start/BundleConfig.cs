@@ -30,7 +30,7 @@ namespace Alp
                 "~/Content/normalize.css",
                 "~/Content/site.css",
                 "~/Content/index.css",
-                "~/Content/staffandfaculty.css"
+                "~/Content/staff-and-faculty.css"
                 ));
 
         }

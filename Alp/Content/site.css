@@ -1,11 +1,12 @@
 ﻿@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 200;
-  src: local('~Content/Fonts/OpenSans/'),
-       url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: local('~Content/Fonts/OpenSans/'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
+
 body {
+    font-family: 'Open Sans', Verdana, sans-serif;
     background: #F9F9F9;
 }
 
@@ -14,26 +15,34 @@ div.spacer {
     height: 1em;
 }
 
-div#main-title {
-    font-family: 'Open Sans', Verdana, sans-serif;
-   }
+h2 {
+    text-align: center;
+    text-shadow: -0.1em 0.1em 0 rgba(20,20,20,0.25);
+}
+
+i {
+    padding-left: 0.6em;
+    padding-right: 0.2em;
+}
+
+
 
 a, a:visited, a:hover, a:active {
     color: inherit;
 }
 
-.navbar{
+.navbar {
     margin: 0 auto;
     text-align: center;
 }
 
 .navbar .nav, .navbar .nav > li {
-    float:none;
-    display:inline-block;
-    *display:inline; /* ie7 fix */
-    *zoom:1; /* hasLayout ie7 trigger */
+    float: none;
+    display: inline-block;
+    *display: inline; /* ie7 fix */
+    *zoom: 1; /* hasLayout ie7 trigger */
     vertical-align: top;
-    min-width: 11.250em;
+    min-width: 10.250em;
 }
 
 .span4 {
@@ -50,3 +59,14 @@ div.footer {
     text-align: center;
 }
 
+div.footer a {
+    padding: 0.2em 1.0em;
+}
+
+div.footer span {
+    padding: 0.2em 1.0em;
+}
+
+div.footer i {
+    padding: 0.2em 0.4em;
+}

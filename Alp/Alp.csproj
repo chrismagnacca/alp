@@ -160,7 +160,7 @@
     <Content Include="Content\Images\slide-5.jpg" />
     <Content Include="Content\Images\slide-6.jpg" />
     <Content Include="Content\index.css" />
-    <Content Include="Content\staffandfaculty.css" />
+    <Content Include="Content\staff-and-faculty.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\css3-mediaqueries.js" />

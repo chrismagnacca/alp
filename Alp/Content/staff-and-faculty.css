@@ -1,0 +1,43 @@
+﻿.bio-pic {
+    padding-top: 1.000em;    
+    padding-bottom: 2.000em;
+    max-width: 200px;
+    max-height: 100%;
+    display: block;
+}
+
+div.bio-pic img{
+    max-width: inherit;
+    max-height: 150px;
+    display: inherit;
+}
+
+
+div.bio-text strong {
+   text-align: center;
+   min-height: 1.4em;
+   display: inherit;
+   padding-top: 1.000em;
+}
+
+span.role {
+    font-size: 0.9em;
+    display: inherit;
+    text-align: center;
+}
+span.years {
+    font-size: 0.8em;
+    display: inherit;
+    text-align: center;
+}
+
+h4.mission {
+    color: #717070;
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 1.25;    
+}
+
+p.signiture {
+    font-style: italic;
+}
