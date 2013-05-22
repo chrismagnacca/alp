@@ -15,17 +15,15 @@ div.spacer {
     height: 1em;
 }
 
-h2 {
-    text-align: center;
-    text-shadow: -0.1em 0.1em 0 rgba(20,20,20,0.25);
-}
-
 i {
     padding-left: 0.6em;
     padding-right: 0.2em;
 }
 
-
+h2 {
+    text-align: center;
+    text-shadow: -0.1em 0.1em 0 rgba(20,20,20,0.25);
+}
 
 a, a:visited, a:hover, a:active {
     color: inherit;

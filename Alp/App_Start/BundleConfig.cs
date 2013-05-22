@@ -30,7 +30,10 @@ namespace Alp
                 "~/Content/normalize.css",
                 "~/Content/site.css",
                 "~/Content/index.css",
-                "~/Content/staff-and-faculty.css"
+                "~/Content/staff-and-faculty.css",
+                "~/Content/fullcalendar.css",
+                "~/Content/fullcalendar-print.css"
+
                 ));
 
         }

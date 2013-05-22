@@ -135,6 +135,8 @@
     <Content Include="Content\bootstrap-min.css" />
     <Content Include="Content\font-awesome-ie7-min.css" />
     <Content Include="Content\font-awesome-min.css" />
+    <Content Include="Content\fullcalendar.css" />
+    <Content Include="Content\fullcalendar-print.css" />
     <Content Include="Content\Images\bio.png" />
     <Content Include="Content\Images\debbie_hensler.jpg" />
     <Content Include="Content\Images\janette_gerdeman.jpg" />
@@ -149,6 +151,7 @@
     <Content Include="Content\Images\subtle-light-patterns.jpg" />
     <Content Include="Content\Images\susan_horton.jpg" />
     <Content Include="Content\normalize.css" />
+    <Content Include="Content\school-calendar.css" />
     <Content Include="Content\site.css" />
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\glyphicons-halflings-white.png" />
@@ -164,6 +167,9 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\css3-mediaqueries.js" />
+    <Content Include="Scripts\fullcalendar.js" />
+    <Content Include="Scripts\fullcalendar.min.js" />
+    <Content Include="Scripts\gcal.js" />
     <Content Include="Scripts\google-maps.js" />
     <Content Include="Scripts\html5.js" />
     <Content Include="Global.asax" />
@@ -184,10 +190,12 @@
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.2.custom.min.js" />
     <Content Include="Scripts\jquery.slides.js" />
     <Content Include="Scripts\jquery.slides.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\schoolcalendar.js" />
     <Content Include="Scripts\staffandfaculty.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -206,6 +214,7 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\StaffAndFaculty.cshtml" />
     <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Views\Home\SchoolCalendar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

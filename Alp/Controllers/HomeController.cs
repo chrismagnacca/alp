@@ -32,6 +32,15 @@ namespace Alp.Controllers
             return View();
         }
 
+        //
+        // GET: /Home/SchoolCalendar
+
+        public ActionResult SchoolCalendar()
+        {
+            return View();
+        }
+
+
         // 
         // GET: /Home/ContactUs
         
