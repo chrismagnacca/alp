@@ -15,10 +15,6 @@ div.spacer {
     height: 1em;
 }
 
-i {
-    padding-left: 0.6em;
-    padding-right: 0.2em;
-}
 
 h2 {
     text-align: center;
@@ -52,19 +48,13 @@ div.footer-container {
     /*background: #EEEEEE;*/
 }
 
-div.footer {
+div.footer div {
     margin-bottom: 1.250em;
+    margin-left: 0;
     text-align: center;
 }
 
-div.footer a {
-    padding: 0.2em 1.0em;
-}
-
-div.footer span {
-    padding: 0.2em 1.0em;
-}
-
-div.footer i {
-    padding: 0.2em 0.4em;
+i {
+    padding-left: 0.4em;
+    padding-right: 0.2em;
 }
