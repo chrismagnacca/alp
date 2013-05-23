@@ -1,3 +1,8 @@
 ﻿#calendar h2 {
     text-shadow: none;
+    max-width: 60.000em;
+}
+
+.cal-event {
+    text-align: center;
 }

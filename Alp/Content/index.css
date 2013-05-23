@@ -14,7 +14,7 @@
 }
 
 .line-break {
-    border-bottom: 1px solid #d9d8d8;
+    border-bottom: 1px solid #d8d8d8;
 }
 
 #index-footer {
@@ -28,8 +28,6 @@ div.slidesjs-container {
 div#footer {
     text-align: center;
 }
-
-
 
 #slides {
   display:none;

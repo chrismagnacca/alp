@@ -32,8 +32,9 @@ namespace Alp
                 "~/Content/index.css",
                 "~/Content/staff-and-faculty.css",
                 "~/Content/fullcalendar.css",
-                "~/Content/fullcalendar-print.css"
-
+                "~/Content/fullcalendar-print.css",
+                "~/Content/school-calendar.css",
+                "~/Content/contact-us.css"
                 ));
 
         }

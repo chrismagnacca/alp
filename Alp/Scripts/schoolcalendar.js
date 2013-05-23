@@ -9,57 +9,44 @@
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'month,agendaWeek,agendaDay'
+            right: ''
+            
         },
         disableDragging: true,
-        editable: true,
         events: [
             {
-                title: 'All Day Event',
-                start: new Date(y, m, 1)
+                title: "Get Acquianted Day Sessions 1 & 2",
+                start: new Date("September 3, 2013 9:00:00"),
+                className: 'cal-event' 
             },
             {
-                title: 'Long Event',
-                start: new Date(y, m, d - 5),
-                end: new Date(y, m, d - 2)
+                title: "First Full Day of Preschool & Extended Care",
+                start: new Date("September 4, 2013 9:00:00"),
+                className: 'cal-event'
             },
             {
-                id: 999,
-                title: 'Repeating Event',
-                start: new Date(y, m, d - 3, 16, 0),
-                allDay: false
+                title: "All School Fall Fundraiser Begins",
+                start: new Date("September 11, 2013 9:00:00"),
+                end: new Date("September 11, 2013 5:00:00"),
+                className: 'cal-event'
             },
             {
-                id: 999,
-                title: 'Repeating Event',
-                start: new Date(y, m, d + 4, 16, 0),
-                allDay: false
+                title: "Parent Assembly, Church Sanctuary",
+                start: new Date("September 11, 2013 18:30:00"),
+                end: new Date("September 11, 2013 17:30:00"),
+                className: 'cal-event'
             },
             {
-                title: 'Meeting',
-                start: new Date(y, m, d, 10, 30),
-                allDay: false
+                title: "All School Fall Fundraiser Ends",
+                start: new Date("September 25, 2013 9:00:00"),
+                className: 'cal-event'
             },
             {
-                title: 'Lunch',
-                start: new Date(y, m, d, 12, 0),
-                end: new Date(y, m, d, 14, 0),
-                allDay: false
-            },
-            {
-                title: 'Birthday Party',
-                start: new Date(y, m, d + 1, 19, 0),
-                end: new Date(y, m, d + 1, 22, 30),
-                allDay: false
-            },
-            {
-                title: 'Click for Google',
-                start: new Date(y, m, 28),
-                end: new Date(y, m, 29),
-                url: 'http://google.com/'
+                title: "Fall School Pictures",
+                start: new Date("October 1, 2013 9:00:00"),
+                className: 'cal-event'
             }
         ]
     });
-
 
 });

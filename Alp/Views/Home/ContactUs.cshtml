@@ -1,11 +1,63 @@
 ﻿@{
     ViewBag.Title = "Contact Us";
 }
+<script type="text/javascript" src="~/Scripts/contact-us.js"></script>
 
-<div class="contactus-container">
+<div class="contact-us-container">
     <br />
-    <br />
+    
     <div class="container">
+        <div class="row">
+            <div class="span12">
+                <h2>Get In Touch</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span3"></div>
+            <div class="span6">
+                <p class="indent">
+                    A students' experiences in preschool should build a positive attitude, which will enable 
+                a smooth transition to school life. Ascension Lutheran Preschool strives to provide a rich, 
+                diverse, multicultural program, through activities in language arts, music, free & creative arts, 
+                dramatic play, math & science reasoning, and health.
+                </p>
 
+                <p class="indent">
+                    If you have any questions regarding our programs or registration, feel free to contact us at your convenience. 
+                </p>
+            </div>
+            <div class="span3"></div>            
+        </div>
+    </div>
+
+    <br />
+    <div class="line-break"></div>
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="span2"></div>
+            <div class="span5">
+                <h4>Message Us</h4><br />
+                @using (Html.BeginForm("Email","ContactUs", FormMethod.Post))
+                {
+                    
+                    <p><input id="Name" type="text" class="name-line" placeholder="Name"/></p>
+                    <p><input id="Return" type="text" class="return-line" placeholder="Return Email"/></p>
+                    <p><input id="Subject" type="text" class="subject-line" placeholder="Subject"/></p>
+                    <p><textarea id="Message" type="text" class="text-input-area" placeholder="Message"></textarea></p>
+                    <input id="Send" type="button" value="Send" class="btn"/>
+                }
+            </div>
+
+            <div class="span4 contact-us">
+                <p><a href="mailto:ascensionpreschool@hotmail.com"><i class="icon-envelope-alt"></i>ascensionpreschool@hotmail.com</a></p>
+                <p><span class="address"><i class="icon-map-marker"></i>1479 Morse Rd. Columbus, OH 43229</span></p>
+                <p><a href="tel:16142682010" class="phone"><i class="icon-phone"></i>Office: (614) 268-2010</a></p>
+                <p><span class="fax"><i class="icon-print"></i>Fax: (614) 268-1164</span></p>
+                <p><a href="https://www.facebook.com/pages/Ascension-Lutheran-Preschool/147568551928235"><i class="icon-facebook-sign"></i>Ascension Lutheran Preschool On Facebook</a></p>
+            </div>
+            <div class="span1"></div>
+        </div>
     </div>
 </div>

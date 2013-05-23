@@ -18,7 +18,6 @@ div.spacer {
 
 h2 {
     text-align: center;
-    text-shadow: -0.1em 0.1em 0 rgba(20,20,20,0.25);
 }
 
 a, a:visited, a:hover, a:active {
@@ -37,6 +36,7 @@ a, a:visited, a:hover, a:active {
     *zoom: 1; /* hasLayout ie7 trigger */
     vertical-align: top;
     min-width: 10.250em;
+    border-radius: 0px;
 }
 
 .span4 {
@@ -48,13 +48,17 @@ div.footer-container {
     /*background: #EEEEEE;*/
 }
 
-div.footer div {
+.footer div {
     margin-bottom: 1.250em;
-    margin-left: 0;
     text-align: center;
+    font-size: 0.905em;
+
 }
 
 i {
-    padding-left: 0.4em;
-    padding-right: 0.2em;
+    padding-right: 0.4em;
+}
+
+div.footer div span.address {
+    padding-left: 1em;
 }

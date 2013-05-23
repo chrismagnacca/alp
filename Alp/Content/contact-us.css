@@ -1,0 +1,20 @@
+﻿div.contact-us {
+    text-align: left;
+}
+
+.name-line {
+}
+
+.subject-line {
+}
+
+.text-input-area {
+    width: 90%;
+    max-width: 90%;
+    height: 18.750em;
+    max-height: 18.750em;
+}
+
+p.indent {
+    text-indent: 1.563em;
+}
