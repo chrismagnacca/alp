@@ -39,15 +39,12 @@
             <div class="span2"></div>
             <div class="span5">
                 <h4>Message Us</h4><br />
-                @using (Html.BeginForm("Email","ContactUs", FormMethod.Post))
-                {
-                    
+ 
                     <p><input id="Name" type="text" class="name-line" placeholder="Name"/></p>
                     <p><input id="Return" type="text" class="return-line" placeholder="Return Email"/></p>
                     <p><input id="Subject" type="text" class="subject-line" placeholder="Subject"/></p>
-                    <p><textarea id="Message" type="text" class="text-input-area" placeholder="Message"></textarea></p>
+                    <p><textarea id="Message" class="text-input-area" placeholder="Message"></textarea></p>
                     <input id="Send" type="button" value="Send" class="btn"/>
-                }
             </div>
 
             <div class="span4 contact-us">

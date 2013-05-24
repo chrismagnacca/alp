@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Net.Mail;
+using Typesafe.Mailgun;
+using System.Text.RegularExpressions;
 
 namespace Alp.Controllers
 {
@@ -43,88 +46,42 @@ namespace Alp.Controllers
 
         // 
         // GET: /Home/ContactUs
-        
+
         public ActionResult ContactUs()
         {
             return View();
         }
 
-        //
-        // GET: /Home/Create
-
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        //
-        // POST: /Home/Create
-
+        // 
+        // POST: /Home/Email
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Email(string name, string returnEmail, string subject, string message)
         {
-            try
+            MailMessage email = new MailMessage();
+            if (!ValidateEmail(returnEmail))
             {
-                // TODO: Add insert logic here
+                return Json(false);
+            }
 
-                return RedirectToAction("Index");
-            }
-            catch
+            var client = new MailgunClient("smtp.mailgun.org", "key-0bh4d1wuo76b-9wugiyovi-yzjce0tf0");
+            client.SendMail(new System.Net.Mail.MailMessage("test@samples.mailgun.org", "chrismagnacca@gmail.com")
             {
-                return View();
-            }
+                Subject = "Hello from mailgun",
+                Body = "this is a test message from mailgun."
+            });
+
+            return Json(true);
         }
 
-        //
-        // GET: /Home/Edit/5
-
-        public ActionResult Edit(int id)
+        private static bool ValidateEmail(string email)
         {
-            return View();
+            return Regex.IsMatch(email,
+                 @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$",
+                 RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+
         }
 
-        //
-        // POST: /Home/Edit/5
 
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /Home/Delete/5
-
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Home/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }
