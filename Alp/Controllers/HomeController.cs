@@ -7,8 +7,6 @@
     using System.Web.Mvc;
     using System.Net.Mail;
     using System.Text.RegularExpressions;
-    using SendGrid;
-    using SendGrid.Transport;
 
     public class HomeController : Controller
     {
@@ -69,26 +67,17 @@
             var sanitizedSubject = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(subject);
             var sanitizedMessage = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(message);
 
-            var composition = SendGrid.Mail.GetInstance();
 
-            composition.From = new MailAddress("alp.apphb.com");
-
-            List<String> recipients = new List<String>
+            var smtpClient = new SmtpClient();
+            var composition = new MailMessage()
             {
-                sanitizedReturnEmail
+                From = new MailAddress(sanitizedReturnEmail),
+                Subject = sanitizedMessage
             };
 
-            composition.AddTo(recipients);
-            composition.Subject = sanitizedSubject;
-            composition.Text = sanitizedMessage;
-
-            var sgu = "73304835-3006-4db9-98bd-873225a85f02@apphb.com";
-            var sgp = "vdzs3kfd";
-
-            var crd = new System.Net.NetworkCredential(sgu, sgp);
-
-            var transport = SMTP.GetInstance(crd);
-            transport.Deliver(composition);
+            composition.To.Add("chrismagnacca@gmail.com");
+            
+            smtpClient.Send(composition);
 
             return Json(true);
         }
