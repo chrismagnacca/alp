@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Net.Mail;
-using Typesafe.Mailgun;
-using System.Text.RegularExpressions;
-
-namespace Alp.Controllers
+﻿namespace Alp.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.Mvc;
+    using System.Net.Mail;
+    using System.Text.RegularExpressions;
+    using SendGrid;
+    using SendGrid.Transport;
+
     public class HomeController : Controller
     {
         //
@@ -63,17 +64,31 @@ namespace Alp.Controllers
                 return Json(false);
             }
 
-            var sanitizedReturnEmail = new System.Net.Mail.MailAddress(Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(returnEmail));
+            var sanitizedReturnEmail = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(returnEmail);
             var sanitizedName = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(name);
             var sanitizedSubject = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(subject);
             var sanitizedMessage = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(message);
 
-            var client = new MailgunClient("http://smtp.mailgun.org/", "key-0bh4d1wuo76b-9wugiyovi-yzjce0tf0");
-            client.SendMail(new System.Net.Mail.MailMessage("postmaster@app12260.mailgun.org", "chrismagnacca@gmail.com")
+            var composition = SendGrid.Mail.GetInstance();
+
+            composition.From = new MailAddress("alp.apphb.com");
+
+            List<String> recipients = new List<String>
             {
-                Subject = sanitizedSubject,
-                Body = sanitizedMessage
-            });
+                sanitizedReturnEmail
+            };
+
+            composition.AddTo(recipients);
+            composition.Subject = sanitizedSubject;
+            composition.Text = sanitizedMessage;
+
+            var sgu = "73304835-3006-4db9-98bd-873225a85f02@apphb.com";
+            var sgp = "vdzs3kfd";
+
+            var crd = new System.Net.NetworkCredential(sgu, sgp);
+
+            var transport = SMTP.GetInstance(crd);
+            transport.Deliver(composition);
 
             return Json(true);
         }
