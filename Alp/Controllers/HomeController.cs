@@ -68,8 +68,8 @@ namespace Alp.Controllers
             var sanitizedSubject = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(subject);
             var sanitizedMessage = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(message);
 
-            var client = new MailgunClient("smtp.mailgun.org", "key-0bh4d1wuo76b-9wugiyovi-yzjce0tf0");
-            client.SendMail(new System.Net.Mail.MailMessage("test@ascensionpreschool.com", "chrismagnacca@gmail.com")
+            var client = new MailgunClient("http://smtp.mailgun.org:587/", "key-0bh4d1wuo76b-9wugiyovi-yzjce0tf0");
+            client.SendMail(new System.Net.Mail.MailMessage("postmaster@app12260.mailgun.org", "chrismagnacca@gmail.com")
             {
                 Subject = sanitizedSubject,
                 Body = sanitizedMessage,
