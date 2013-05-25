@@ -54,30 +54,35 @@
         // 
         // POST: /Home/Email
         [HttpPost]
-        public ActionResult Email(string name, string returnEmail, string subject, string message)
-        {
-            MailMessage email = new MailMessage();
+        public ActionResult ContectUsEmail(string name, string returnEmail, string subject, string message)
+        {            
             if (!ValidateEmail(returnEmail))
             {
-                return Json(false);
+
+                var error = new JsonErrorModel
+                {
+                    ErrorCode = -1,
+                    ErrorMessage = "invalid return email"
+                };
+
+                return Json(error);
             }
 
             var sanitizedReturnEmail = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(returnEmail);
             var sanitizedName = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(name);
             var sanitizedSubject = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(subject);
             var sanitizedMessage = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(message);
-
-
+            // TODO: write format email method to generate http email from sanitized input
             var smtpClient = new SmtpClient();
-            var composition = new MailMessage()
+            var email = new MailMessage()
             {
                 From = new MailAddress(sanitizedReturnEmail),
-                Subject = sanitizedMessage
+                Subject = sanitizedSubject,
+                Body = sanitizedMessage,
             };
 
-            composition.To.Add("chrismagnacca@gmail.com");
-            
-            smtpClient.Send(composition);
+            email.To.Add("test");
+            smtpClient.Send(email);
 
             return Json(true);
         }
@@ -92,5 +97,12 @@
         }
 
 
+    }
+
+
+    public class JsonErrorModel 
+    {
+        public int ErrorCode { get; set; }
+        public string ErrorMessage { get; set; }
     }
 }
