@@ -63,11 +63,17 @@ namespace Alp.Controllers
                 return Json(false);
             }
 
+            var sanitizedReturnEmail = new System.Net.Mail.MailAddress(Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(returnEmail));
+            var sanitizedName = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(name);
+            var sanitizedSubject = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(subject);
+            var sanitizedMessage = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(message);
+
             var client = new MailgunClient("smtp.mailgun.org", "key-0bh4d1wuo76b-9wugiyovi-yzjce0tf0");
-            client.SendMail(new System.Net.Mail.MailMessage("test@samples.mailgun.org", "chrismagnacca@gmail.com")
+            client.SendMail(new System.Net.Mail.MailMessage("test@ascensionpreschool.com", "chrismagnacca@gmail.com")
             {
-                Subject = "Hello from mailgun",
-                Body = "this is a test message from mailgun."
+                Subject = sanitizedSubject,
+                Body = sanitizedMessage,
+                From = sanitizedReturnEmail
             });
 
             return Json(true);
