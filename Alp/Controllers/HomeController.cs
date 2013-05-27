@@ -1,6 +1,7 @@
 ﻿namespace Alp.Controllers
 {
     using System;
+    using System.IO;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
@@ -51,11 +52,51 @@
             return View();
         }
 
+
+        //
+        // GET: /Home/Registration
+
+        public ActionResult Registration()
+        {
+            return View();
+        }
+
+
+        //
+        // POST: /Home/Download
+
+        public ActionResult Download(string fileName)
+        {
+            var sanitizedFileName = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(fileName);
+            var error = new JsonErrorModel
+            {
+                ErrorCode = -1,
+                ErrorMessage = "invalid file name"
+            };
+
+            if (sanitizedFileName == null)
+            {
+
+
+                return Json(error);
+            }
+
+            var file = Server.MapPath("~/Content/Files/" + sanitizedFileName);
+            if (System.IO.File.Exists(file))
+                return File("~/Content/Files/" + sanitizedFileName, "application/pdf", sanitizedFileName);
+            else
+                return Json(error);
+
+
+        }
+
+
         // 
         // POST: /Home/Email
+
         [HttpPost]
         public ActionResult ContectUsEmail(string name, string returnEmail, string subject, string message)
-        {            
+        {
             if (!ValidateEmail(returnEmail))
             {
 
@@ -100,7 +141,7 @@
     }
 
 
-    public class JsonErrorModel 
+    public class JsonErrorModel
     {
         public int ErrorCode { get; set; }
         public string ErrorMessage { get; set; }

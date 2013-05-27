@@ -156,6 +156,7 @@
     <Content Include="Content\Images\kathy_burton.jpg" />
     <Content Include="Content\Images\leigh_plymale.jpg" />
     <Content Include="Content\Images\marie_routman.jpg" />
+    <Content Include="Content\Images\mary_lynne.jpg" />
     <Content Include="Content\Images\nancy_antonelli.jpg" />
     <Content Include="Content\Images\rachael_wilshire.jpg" />
     <Content Include="Content\Images\slide-1.jpg" />
@@ -201,6 +202,12 @@
     <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\Fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Fonts\FontAwesome.otf" />
+    <Content Include="Content\Files\2013-2014_registration_form.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Files\2013-2014_school_calendar.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -211,6 +218,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\registration.js" />
     <Content Include="Scripts\schoolcalendar.js" />
     <Content Include="Scripts\staffandfaculty.js" />
     <Content Include="Scripts\_references.js" />
@@ -231,6 +239,8 @@
     <Content Include="Views\Home\StaffAndFaculty.cshtml" />
     <Content Include="Views\Home\ContactUs.cshtml" />
     <Content Include="Views\Home\SchoolCalendar.cshtml" />
+    <Content Include="Views\Home\Registration.cshtml" />
+    <Content Include="Scripts\masked.min.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

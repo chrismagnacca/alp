@@ -8,10 +8,14 @@
     @Styles.Render("~/Content/Css")
 
     <script type="text/javascript" src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery-ui-1.10.2.custom.min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.slides.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/masked.min.js"></script>
+
     <script type="text/javascript" src="~/Scripts/fullcalendar.js"></script>
     <script type="text/javascript" src="~/Scripts/schoolcalendar.js"></script>
+    <script type="text/javascript" src="~/Scripts/registration.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
     <script type="text/javascript" src="~/Scripts/additional-methods.min.js"></script>
 
@@ -26,7 +30,7 @@
             <ul class="nav">
                 <li><a href="@Url.Action("Index", "Home")">Home</a></li>
                 <li><a href="@Url.Action("StaffAndFaculty", "Home")">Staff & Faculty</a></li>
-                <li><a href="#">Registration Information</a></li>
+                <li><a href="@Url.Action("Registration", "Home")">Registration Information</a></li>
                 <li><a href="@Url.Action("SchoolCalendar", "Home")">School Calendar</a></li>
                 <li><a href="@Url.Action("Directions", "Home")">Directions</a></li>
                 <li><a href="@Url.Action("ContactUs", "Home")">Contact Us</a></li>
@@ -48,8 +52,7 @@
                 </div>
                 <div class="span5"></div>
             </div>
-        </div>
-        
+        </div>        
     </div>
 </body>
 </html>
