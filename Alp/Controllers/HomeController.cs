@@ -67,27 +67,17 @@
 
         public ActionResult Download(string fileName)
         {
-            var sanitizedFileName = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(fileName);
-            var error = new JsonErrorModel
-            {
-                ErrorCode = -1,
-                ErrorMessage = "invalid file name"
-            };
+            var sanitizedFileName = Sanitize(fileName);
 
             if (sanitizedFileName == null)
-            {
-
-
-                return Json(error);
-            }
+                return Json(JsonError(-1, "invalid file name"));
 
             var file = Server.MapPath("~/Content/Files/" + sanitizedFileName);
+
             if (System.IO.File.Exists(file))
                 return File("~/Content/Files/" + sanitizedFileName, "application/pdf", sanitizedFileName);
             else
-                return Json(error);
-
-
+                return Json(JsonError(-1, "invalid file name"));
         }
 
 
@@ -97,24 +87,16 @@
         [HttpPost]
         public ActionResult ContectUsEmail(string name, string returnEmail, string subject, string message)
         {
-            if (!ValidateEmail(returnEmail))
-            {
+            if (ValidateEmail(returnEmail) == false)
+                return Json(JsonError(-1, "invalid return email"));
 
-                var error = new JsonErrorModel
-                {
-                    ErrorCode = -1,
-                    ErrorMessage = "invalid return email"
-                };
+            var sanitizedReturnEmail = Sanitize(returnEmail);
+            var sanitizedName = Sanitize(name);
+            var sanitizedSubject = Sanitize(subject);
+            var sanitizedMessage = Sanitize(message);
 
-                return Json(error);
-            }
-
-            var sanitizedReturnEmail = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(returnEmail);
-            var sanitizedName = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(name);
-            var sanitizedSubject = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(subject);
-            var sanitizedMessage = Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(message);
-            // TODO: write format email method to generate http email from sanitized input
             var smtpClient = new SmtpClient();
+
             var email = new MailMessage()
             {
                 From = new MailAddress(sanitizedReturnEmail),
@@ -123,6 +105,7 @@
             };
 
             email.To.Add("test");
+
             smtpClient.Send(email);
 
             return Json(true);
@@ -137,9 +120,21 @@
 
         }
 
+        private static string Sanitize(string input)
+        {
+            return Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(input);
+        }
+
+        private static JsonErrorModel JsonError(int errorCode, string errorMessage)
+        {
+            return new JsonErrorModel()
+            {
+                ErrorCode = errorCode,
+                ErrorMessage = errorMessage
+            };
+        }
 
     }
-
 
     public class JsonErrorModel
     {
