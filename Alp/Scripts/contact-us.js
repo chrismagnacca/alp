@@ -1,7 +1,6 @@
 ﻿$(function () {
 
     $('#Send').on('click', function () {
-        $('contact-us-form').validate();        
 
         data = {
             'name': $('#Name').val(),
@@ -14,9 +13,10 @@
             type: 'POST',
             url: '/Home/ContectUsEmail/',
             data: data,
-            success: function (data, textStatus, jqXHR) { alert('DERP') },
-            error: function(jqXHR, textStatus, errorThrown) {alert('DERP')},
+            success: function (data, textStatus, jqXHR) {  },
+            error: function(jqXHR, textStatus, errorThrown) { },
             datatype: 'json'
         });
     });
+
 });

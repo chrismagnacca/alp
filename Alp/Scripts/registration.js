@@ -1,4 +1,15 @@
 ﻿$(function () {
+    $("#DaysTimes").hide();
+
+
+    $("#ExtendedCareYes").on("click", function () {
+        $("#DaysTimes").show();
+    });
+
+    $("#ExtendedCareNo").on("click", function () {
+        $("#DaysTimes").hide();
+    });
+
     $("#Telephone").mask("(999) 999 - 9999");
 
     $("#Telephone").on("blur", function () {
@@ -13,4 +24,32 @@
             $(this).val(first + '-' + lastfour);
         }
     });
+
+    $('#RegSend').on('click', function () {
+        data = {
+            'childName': $('#FullChildName').val(),
+            'dateOfBirth': $('#DOB').val(),
+            'maleFemale': $('.malefemale.active').val(),
+            'address': $('#Address').val(),
+            'city': $('#City').val(),
+            'zip': $('#Zip').val(),
+            'ageChild': $('#AgeChild').val(),
+            'guardians': $('#Guardians').val(),
+            'telephone': $('#Telephone').val(),
+            'email': $('#Email').val(),
+            'enrollmentDays': $('.enrollment.active').val(),
+            'extendedCare': $('.extended-care.active').val(),
+            'extendedCareDaysTimes': $('#DaysTimes').val()
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: '/Home/RegistrationEmail/',
+            data: data,
+            success: function (data, textStatus, jqXHR) { },
+            error: function (jqXHR, textStatus, errorThrown) { },
+            datatype: 'json'
+        });
+    });
+
 });
