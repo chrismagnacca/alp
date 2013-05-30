@@ -2,9 +2,11 @@
 {
     using System;
     using System.IO;
+    using System.Collections.Specialized;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
+    using System.Web.UI.WebControls;
     using System.Web.Mvc;
     using System.Net.Mail;
     using System.Text;
@@ -92,7 +94,7 @@
 
             if (ValidateEmail(sanitizedReturnEmail) == false)
                 return Json(JsonError(-1, "invalid return email"));
-           
+
             var sanitizedName = Sanitize(name);
             var sanitizedSubject = Sanitize(subject);
             var sanitizedMessage = Sanitize(message);
@@ -114,8 +116,7 @@
 
         [HttpPost]
         public ActionResult RegistrationEmail(string childName, string dateOfBirth, string maleFemale, string address, string city, string zip,
-            string ageChild, string guardians, string telephone, string email, string enrollmentDays, string extendedCare, string extendedCareDaysTimes )
-
+            string ageChild, string guardians, string telephone, string email, string enrollmentDays, string extendedCare, string extendedCareDaysTimes)
         {
             var sanitizedEmail = Sanitize(email);
 
@@ -135,28 +136,99 @@
             var sanitizedExtendedCare = Sanitize(extendedCare);
             var sanitizedExtendedCareDaysTimes = Sanitize(extendedCareDaysTimes);
 
-            var mailBody = new StringBuilder();
+            var emailDefinition = new MailDefinition();
+            
+            emailDefinition.From = sanitizedEmail;
+            emailDefinition.IsBodyHtml = true;
+            emailDefinition.Subject = "Online Registration: " + sanitizedChildName;
 
-            mailBody.AppendFormat("<h2>Online Registration: " + sanitizedChildName + "</h2>");
-            mailBody.AppendFormat("<p>Name of Child: " + sanitizedChildName + "</p>");
-            mailBody.AppendFormat("<p>Date of Birth: " + sanitizedDateOfBirth + "</p>");
-            mailBody.AppendFormat("<p>Address: " + sanitizedAddress + "</p>");
-            mailBody.AppendFormat("<p>City: " + sanitizedCity + "</p>");
-            mailBody.AppendFormat("<p>Zip: " + sanitizedZip + "</p>");
-            mailBody.AppendFormat("<p>Telephone: " + sanitizedTelephone + "</p>");
-            mailBody.AppendFormat("<p>Name of parent(s) or guardian with whom child lives: " + sanitizedGuardians + "</p>");
-            mailBody.AppendFormat("<p>Age on September 30, 2013: " + sanitizedAgeChild + "</p>");
-            mailBody.AppendFormat("<p>Sex: " + sanitizedMaleFemale + "</p>");
-            mailBody.AppendFormat("<p>Number of days per week of Enrollment: " + sanitizedEnrollmentDays + "</p>");
-            mailBody.AppendFormat("<p>Are you interested in Extended Child Care?: " + sanitizedExtendedCare + "</p>");
-            mailBody.AppendFormat("<p>If selecting YES, please list Days & Times: " + sanitizedExtendedCareDaysTimes+ "</p>");
+            var replacements = new ListDictionary();
+            
+            replacements.Add("<%NameOfChild%>", sanitizedChildName);
+            replacements.Add("<%DateOfBirth%>", sanitizedDateOfBirth);
+            replacements.Add("<%Address%>", sanitizedAddress);
+            replacements.Add("<%City%>", sanitizedCity);
+            replacements.Add("<%Zip%>", sanitizedZip);
+            replacements.Add("<%Telephone%>", sanitizedTelephone);
+            replacements.Add("<%Email%>", sanitizedEmail);
+            replacements.Add("<%Guardians%>", sanitizedGuardians);
+            replacements.Add("<%AgeOfChild%>", sanitizedAgeChild);
+            replacements.Add("<%Sex%>", sanitizedMaleFemale);
+            replacements.Add("<%EnrollmentDays%>", sanitizedEnrollmentDays);
+            replacements.Add("<%ExtendedCareInterest%>", sanitizedExtendedCare);
+            replacements.Add("<%ExtendedCareTimes%>", sanitizedExtendedCareDaysTimes);
+            
+            string body = @"
+                    <style>
+                    .email-body {
+                        font-family: Helvetica, Verdana, sans-serif;
+                        background: #F9F9F9;
+                        width: 800px;
+                        max-width: 800px;
+                    }
 
-            var emailMessage = new MailMessage()
-            {
-                From = new MailAddress(sanitizedEmail),
-                Subject = "Online Registration: " + sanitizedChildName,
-                Body = mailBody.ToString(),
-            };
+                    h2, h3 { 
+                        text-align: center;
+                        font-weight: lighter;
+                    }
+
+                    span.underline {
+                        text-decoration: underline;
+                    }
+
+                    div.info {
+                        text-align: justify
+                    }
+
+                    </style>
+
+                    <div class=\""email-body\"">
+                         <h2>Registration Form</h2>
+                         <h3>Ascension Lutheran Preschool</h3>
+                         <h3>2013 - 2014 School Year</h3>
+
+                         <div class=\""info\"">
+                              <p>
+                                   Name of Child: <span class=\""name underline\""><%NameOfChild%></span>&nbsp;&nbsp;&nbsp;
+                                   Date of Birth: <span class=\""dob underline\""><%DateOfBirth%></span>
+                              </p>
+
+                              <p>
+                                   Address: <span class=\""address underline\""><%Address%></span>&nbsp;&nbsp;&nbsp;
+                                   City: <span class=\""city underline\""><%City%></span>&nbsp;&nbsp;&nbsp;
+                                   Zip Code: <span class=\""zip underline\""><%Zip%></span>
+                              </p>
+
+                              <p>
+                                   Telephone #: <span class=\""telephone underline\""><%Telephone%></span>&nbsp;&nbsp;&nbsp;
+                                   Email: <span class=\""email underline\""><%Email%></span>
+                              </p>
+
+                              <p>
+                                   Name of parent(s) or guardian(s): <span class=\""parents underline\""><%Guardians%></span>&nbsp;&nbsp;&nbsp;
+                                   Age of Child on September 30, 2013: <span class=\""age underline\""><%AgeOfChild%></span>
+                                   Sex: <span class=\""sex underline\""><%Sex%></span>
+                              </p>
+
+                              <p>
+                                   Number of days per week of enrollment: <span class=\""enrollment underline\""><%EnrollmentDays%></span>&nbsp;&nbsp;&nbsp;
+                                   Are you interested in Extended Care?: <span class=\""interest underline\""><%ExtendedCareInterest%></span>
+                              </p>
+
+                              <p>
+                                   Extended Care Times: <span class=\""times underline\""><%ExtendedCareTimes%></span>&nbsp;&nbsp;&nbsp;
+                              </p>
+
+                              <p>
+                                   Registration Fee: <span class=\""fee underline\"">$45</span>&nbsp;&nbsp;&nbsp;
+                                   Paid On (Office Use Only): <span class=\""paid-on underline\"">___________</span>&nbsp;&nbsp;&nbsp;
+                                   Cash/Check/Credit Card: <span class=\""paid-on underline\"">_____________</span>
+                              </p>
+                         </div>
+                    </div>
+                ";
+
+            var emailMessage = emailDefinition.CreateMailMessage("webmom1018@gmail.com", replacements, body, new System.Web.UI.Control());           
 
             SendEmail(emailMessage);
 
@@ -166,10 +238,9 @@
         private void SendEmail(MailMessage email)
         {
             var smtpClient = new SmtpClient();
-            email.To.Add("chrismagnacca@gmail.com");
             smtpClient.Send(email);
         }
-                
+
         private static bool ValidateEmail(string email)
         {
             return Regex.IsMatch(email,

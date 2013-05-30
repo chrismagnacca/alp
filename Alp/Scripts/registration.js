@@ -1,7 +1,6 @@
 ﻿$(function () {
     $("#DaysTimes").hide();
 
-
     $("#ExtendedCareYes").on("click", function () {
         $("#DaysTimes").show();
     });
