@@ -10,20 +10,26 @@ div.bio-pic img{
     max-width: inherit;
     max-height: 150px;
     display: inherit;
+    box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4)
 }
 
+.administrator-message {
+   background-color: #f9f9f9;
+}
 
 div.bio-text strong {
    text-align: center;
    min-height: 1.4em;
    display: inherit;
    padding-top: 1.000em;
+   color: #FFFFFF;
 }
 
 span.role {
     font-size: 0.9em;
     display: inherit;
     text-align: center;
+    color: #FFFFFF;
 }
 span.years {
     font-size: 0.8em;
@@ -40,4 +46,9 @@ h4.mission {
 
 p.signiture {
     font-style: italic;
+}
+
+.staff-wrapper {
+    background-color: #1b8cb6;
+    color: #f9f9f9;
 }

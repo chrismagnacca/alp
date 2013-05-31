@@ -25,25 +25,27 @@
     <![endif]-->
 </head>
 <body>
-    <div class="navbar">
-        <div class="navbar-inner" id="navbar">
-            <ul class="nav">
-                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
-                <li><a href="@Url.Action("StaffAndFaculty", "Home")">Staff & Faculty</a></li>
-                <li><a href="@Url.Action("Registration", "Home")">Registration Information</a></li>
-                <li><a href="@Url.Action("SchoolCalendar", "Home")">School Calendar</a></li>
-                <li><a href="@Url.Action("Directions", "Home")">Directions</a></li>
-                <li><a href="@Url.Action("ContactUs", "Home")">Contact Us</a></li>
-            </ul>
+    <div class="nav-wrapper">
+        <div class="navbar">
+            <div class="navbar-inner" id="navbar">
+                <ul class="nav">
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("StaffAndFaculty", "Home")">Staff & Faculty</a></li>
+                    <li><a href="@Url.Action("Registration", "Home")">Registration Information</a></li>
+                    <li><a href="@Url.Action("SchoolCalendar", "Home")">School Calendar</a></li>
+                    <li><a href="@Url.Action("Directions", "Home")">Directions</a></li>
+                    <li><a href="@Url.Action("ContactUs", "Home")">Contact Us</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-    
     @RenderBody()
 
-    <br /><br />
     <div class="line-break"></div>
-    <br /><br />
+
     <div class="footer">
+        <br />
+        <br />
         <div class="container">
             <div class="row span12">
                 <div class="span3"></div>
@@ -51,8 +53,10 @@
                     Copyright &copy; 2013 Ascension Lutheran Preschool
                 </div>
                 <div class="span5"></div>
+            
             </div>
-        </div>        
+            <br /><br />
+        </div>
     </div>
 </body>
 </html>

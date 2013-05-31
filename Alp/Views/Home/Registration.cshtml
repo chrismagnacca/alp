@@ -25,85 +25,86 @@
 
     <br />
     <div class="line-break"></div>
-    <br />
 
-    <div class="container">
-        <form id="registration-validate">
+    <div class="registration-form-container">
+        <div class="container">
+            <br />
+            <form id="registration-validate">
 
-            <div class="row">
-                <div class="span12">
-                    <h4>Registration Form</h4>
-                    <br />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span6">
-                    <input id="FullChildName" type="text" class="child-name-line input-xxlarge" placeholder="Name of Child" maxlength="350" required />
+                <div class="row">
+                    <div class="span12">
+                        <h4>Registration Form</h4>
+                        <br />
+                    </div>
                 </div>
 
-                <div class="span3">
-                    <p>
-                        <input id="DOB" type="text" class="dob-line" placeholder="Date of Birth (MM/DD/YYYY)" maxlength="50" required />
-                    </p>
-                </div>
-                <div class="span3">
-                    <div class="btn-group" style="width: 100%" data-toggle="buttons-radio">
+                <div class="row">
+                    <div class="span6">
+                        <input id="FullChildName" type="text" class="child-name-line input-xxlarge" placeholder="Name of Child" maxlength="350" required />
+                    </div>
+
+                    <div class="span3">
                         <p>
-                            <button type="button" style="width: 41%" class="malefemale btn">Male</button>
-                            <button type="button" style="width: 41%" class="malefemale btn">Female</button>
+                            <input id="DOB" type="text" class="dob-line" placeholder="Date of Birth (MM/DD/YYYY)" maxlength="50" required />
+                        </p>
+                    </div>
+                    <div class="span3">
+                        <div class="btn-group" style="width: 100%" data-toggle="buttons-radio">
+                            <p>
+                                <button type="button" style="width: 41%" class="malefemale btn">Male</button>
+                                <button type="button" style="width: 41%" class="malefemale btn">Female</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span3">
+                        <p>
+                            <input id="Address" type="text" class="address-line input-large" placeholder="Address" maxlength="500" required />
+                        </p>
+                    </div>
+                    <div class="span3">
+                        <p>
+                            <input id="City" type="text" class="city-line" placeholder="City" maxlength="75" required />
+                        </p>
+                    </div>
+
+                    <div class="span3">
+                        <p>
+                            <input id="Zip" type="text" class="zip-line" placeholder="Zip Code" maxlength="9" required />
+                        </p>
+
+                    </div>
+
+                    <div class="span3">
+                        <p>
+                            <input id="AgeChild" type="text" class="age-line input-large" placeholder="Child's Age on 09/30/2013" maxlength="2" required />
                         </p>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="span3">
-                    <p>
-                        <input id="Address" type="text" class="address-line input-large" placeholder="Address" maxlength="500" required />
-                    </p>
-                </div>
-                <div class="span3">
-                    <p>
-                        <input id="City" type="text" class="city-line" placeholder="City" maxlength="75" required />
-                    </p>
-                </div>
-
-                <div class="span3">
-                    <p>
-                        <input id="Zip" type="text" class="zip-line" placeholder="Zip Code" maxlength="9" required />
-                    </p>
-
+                <div class="row">
+                    <div class="span6">
+                        <p>
+                            <input id="Guardians" type="text" class="guardians-line input-xxlarge" placeholder="Name(s) of Parents or Guardians" maxlength="500" required />
+                        </p>
+                    </div>
+                    <div class="span3">
+                        <p>
+                            <input id="Telephone" type="text" class="phone-line input-large" placeholder="Telephone Number" maxlength="500" required />
+                        </p>
+                    </div>
+                    <div class="span3">
+                        <p>
+                            <input id="Email" type="text" class="email-line input-large" placeholder="Email" maxlength="500" required />
+                        </p>
+                    </div>
                 </div>
 
-                <div class="span3">
-                    <p>
-                        <input id="AgeChild" type="text" class="age-line input-large" placeholder="Child's Age on 09/30/2013" maxlength="2" required />
-                    </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span6">
-                    <p>
-                        <input id="Guardians" type="text" class="guardians-line input-xxlarge" placeholder="Name(s) of Parents or Guardians" maxlength="500" required />
-                    </p>
-                </div>
-                <div class="span3">
-                    <p>
-                        <input id="Telephone" type="text" class="phone-line input-large" placeholder="Telephone Number" maxlength="500" required />
-                    </p>
-                </div>
-                <div class="span3">
-                    <p>
-                        <input id="Email" type="text" class="email-line input-large" placeholder="Email" maxlength="500" required />
-                    </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span4" style="text-align:left;">
-                    Number of Days per Week of Enrollment:
+                <div class="row">
+                    <div class="span4" style="text-align: left;">
+                        Number of Days per Week of Enrollment:
                     <div class="btn-group" style="width: 100%" data-toggle="buttons-radio">
                         <p>
                             <button type="button" style="width: 20%" class="enrollment btn">2</button>
@@ -112,35 +113,36 @@
                             <button type="button" style="width: 20%" class="enrollment btn">5</button>
                         </p>
                     </div>
-                </div>
-                <div class="span3">
-                    Interested in Extended Care?
+                    </div>
+                    <div class="span3">
+                        Interested in Extended Care?
                     <div class="btn-group" style="width: 100%" data-toggle="buttons-radio">
                         <p>
                             <button type="button" style="width: 41%" id="ExtendedCareYes" class="extended-care btn">Yes</button>
                             <button type="button" style="width: 41%" id="ExtendedCareNo" class="extended-care btn">No</button>
                         </p>
                     </div>
+                    </div>
+                    <div class="span3">
+                    </div>
+                    <div class="span2"></div>
                 </div>
-                <div class="span3">
+
+                <div class="row">
+                    <div class="span12">
+                        <input id="DaysTimes" style="width: 100%" type="text" class="extended-care-line input-xxlarge" placeholder="Please List Extended Care Days & Times" maxlength="500" />
+                    </div>
                 </div>
-                <div class="span2"></div>
-            </div>
 
-            <div class="row">
-                <div class="span12">
-                    <input id="DaysTimes" style="width: 100%" type="text" class="extended-care-line input-xxlarge" placeholder="Please List Extended Care Days & Times" maxlength="500" />
+                <br />
+
+                <div class="row">
+                    <div class="span1">
+                        <input id="RegSend" type="button" value="Send" class="btn" />
+                    </div>
                 </div>
-            </div>
 
-            <br />
-
-            <div class="row">
-                <div class="span1">
-                    <input id="RegSend" type="button" value="Send" class="btn" />
-                </div>
-            </div>
-
-        </form>
+            </form>
+        </div>
     </div>
 </div>

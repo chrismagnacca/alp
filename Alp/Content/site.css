@@ -1,13 +1,15 @@
 ﻿@font-face {
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 200;
+    font-weight: 300;
     src: local('~Content/Fonts/OpenSans/'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
 
 body {
-    font-family: 'Open Sans', Verdana, sans-serif;
-    background: #F9F9F9;
+    /*font-family: 'Open Sans', Verdana, sans-serif;*/
+    font-family: Kievit, 'lucida grande', tahoma, verdana, arial, sans-serif;
+    background: #FFFFFF;
+    color: #434750;
 }
 
 div.spacer {
@@ -15,18 +17,43 @@ div.spacer {
     height: 1em;
 }
 
-
 h2 {
     text-align: center;
+    text-shadow: -0.075em 0.075em 0 rgba(20,20,20,0.25);
+}
+
+.main-heading {
+    color: #434750;
+    text-shadow: -0.075em 0.075em 0 rgba(20,20,20,0.25);
 }
 
 a, a:visited, a:hover, a:active {
     color: inherit;
 }
 
+.registration-form-container {
+    background-color: #1b8cb6;
+    color: #FFFFFF;
+}
+
+.registration-form-container input {
+    box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
+}
+
+.registration-form-container .btn-group {
+    box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
+}
+
+ul li:hover {
+    background: #0b506c;
+}
+
 .navbar {
+    background: #0b6d8d url('/Content/Images/menubg.png') repeat-x;
+    color: #f9f9f9;
     margin: 0 auto;
     text-align: center;
+    text-shadow: none;
 }
 
 .navbar .nav, .navbar .nav > li {
@@ -39,6 +66,38 @@ a, a:visited, a:hover, a:active {
     border-radius: 0px;
 }
 
+.nav > li > a:hover {
+    color: #f8f5ec !important;
+}
+
+.navbar-inner {
+    background: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.navbar .nav > li > a {
+    text-shadow: none !important;
+    color: #FFFFFF;
+}
+
+.navbar-inverse .nav .active > a {
+    background: 0 !important;
+    color: #333 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.navbar-inverse .nav > li > a {
+    color: #333 !important;
+    text-shadow: none !important;
+}
+
+    .navbar-inverse .nav > li > a:hover {
+        color: #333 !important;
+    }
+
 .span4 {
     text-align: center;
 }
@@ -48,12 +107,16 @@ div.footer-container {
     /*background: #EEEEEE;*/
 }
 
-.footer div {
-    margin-bottom: 1.250em;
-    text-align: center;
-    font-size: 0.905em;
 
+.footer {
+    background-color: #f9f9f9;
+    color: #434750;
 }
+
+    .footer div {
+        text-align: center;
+        font-size: 0.905em;
+    }
 
 i {
     padding-right: 0.4em;

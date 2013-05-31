@@ -157,11 +157,14 @@
     <Content Include="Content\Images\leigh_plymale.jpg" />
     <Content Include="Content\Images\marie_routman.jpg" />
     <Content Include="Content\Images\mary_lynne.jpg" />
+    <Content Include="Content\Images\menubg.png" />
     <Content Include="Content\Images\nancy_antonelli.jpg" />
     <Content Include="Content\Images\rachael_wilshire.jpg" />
     <Content Include="Content\Images\slide-1.jpg" />
     <Content Include="Content\Images\subtle-light-patterns.jpg" />
     <Content Include="Content\Images\susan_horton.jpg" />
+    <Content Include="Content\Images\ticks.png" />
+    <Content Include="Content\Images\ticks_%402X.png" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\school-calendar.css" />
     <Content Include="Content\site.css" />
@@ -241,6 +244,7 @@
     <Content Include="Views\Home\SchoolCalendar.cshtml" />
     <Content Include="Views\Home\Registration.cshtml" />
     <Content Include="Scripts\masked.min.js" />
+    <Content Include="Views\Home\_RegistrationEmail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

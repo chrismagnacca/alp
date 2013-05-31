@@ -15,6 +15,27 @@
     max-height: 18.750em;
 }
 
+.get-in-touch {
+    background-color: #f9f9f9;
+}
+
 p.indent {
     text-indent: 1.563em;
 }
+
+.message-us-container h2 {
+    text-align: left;
+}
+
+.message-us-container {
+    background-color: #1b8cb6;
+    color: #f9f9f9;
+}
+
+    .message-us-container input {
+        box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
+    }
+
+    .message-us-container textarea {
+        box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
+    }

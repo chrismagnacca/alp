@@ -158,77 +158,9 @@
             replacements.Add("<%ExtendedCareInterest%>", sanitizedExtendedCare);
             replacements.Add("<%ExtendedCareTimes%>", sanitizedExtendedCareDaysTimes);
             
-            string body = @"
-                    <style>
-                    .email-body {
-                        font-family: Helvetica, Verdana, sans-serif;
-                        background: #F9F9F9;
-                        width: 800px;
-                        max-width: 800px;
-                    }
+            string body = RenderPartialViewToString("_RegistrationEmail") ;
 
-                    h2, h3 { 
-                        text-align: center;
-                        font-weight: lighter;
-                    }
-
-                    span.underline {
-                        text-decoration: underline;
-                    }
-
-                    div.info {
-                        text-align: justify
-                    }
-
-                    </style>
-
-                    <div class=\""email-body\"">
-                         <h2>Registration Form</h2>
-                         <h3>Ascension Lutheran Preschool</h3>
-                         <h3>2013 - 2014 School Year</h3>
-
-                         <div class=\""info\"">
-                              <p>
-                                   Name of Child: <span class=\""name underline\""><%NameOfChild%></span>&nbsp;&nbsp;&nbsp;
-                                   Date of Birth: <span class=\""dob underline\""><%DateOfBirth%></span>
-                              </p>
-
-                              <p>
-                                   Address: <span class=\""address underline\""><%Address%></span>&nbsp;&nbsp;&nbsp;
-                                   City: <span class=\""city underline\""><%City%></span>&nbsp;&nbsp;&nbsp;
-                                   Zip Code: <span class=\""zip underline\""><%Zip%></span>
-                              </p>
-
-                              <p>
-                                   Telephone #: <span class=\""telephone underline\""><%Telephone%></span>&nbsp;&nbsp;&nbsp;
-                                   Email: <span class=\""email underline\""><%Email%></span>
-                              </p>
-
-                              <p>
-                                   Name of parent(s) or guardian(s): <span class=\""parents underline\""><%Guardians%></span>&nbsp;&nbsp;&nbsp;
-                                   Age of Child on September 30, 2013: <span class=\""age underline\""><%AgeOfChild%></span>
-                                   Sex: <span class=\""sex underline\""><%Sex%></span>
-                              </p>
-
-                              <p>
-                                   Number of days per week of enrollment: <span class=\""enrollment underline\""><%EnrollmentDays%></span>&nbsp;&nbsp;&nbsp;
-                                   Are you interested in Extended Care?: <span class=\""interest underline\""><%ExtendedCareInterest%></span>
-                              </p>
-
-                              <p>
-                                   Extended Care Times: <span class=\""times underline\""><%ExtendedCareTimes%></span>&nbsp;&nbsp;&nbsp;
-                              </p>
-
-                              <p>
-                                   Registration Fee: <span class=\""fee underline\"">$45</span>&nbsp;&nbsp;&nbsp;
-                                   Paid On (Office Use Only): <span class=\""paid-on underline\"">___________</span>&nbsp;&nbsp;&nbsp;
-                                   Cash/Check/Credit Card: <span class=\""paid-on underline\"">_____________</span>
-                              </p>
-                         </div>
-                    </div>
-                ";
-
-            var emailMessage = emailDefinition.CreateMailMessage("webmom1018@gmail.com", replacements, body, new System.Web.UI.Control());           
+            var emailMessage = emailDefinition.CreateMailMessage("chrismagnacca@gmail.com", replacements, body, new System.Web.UI.Control());           
 
             SendEmail(emailMessage);
 
@@ -239,6 +171,37 @@
         {
             var smtpClient = new SmtpClient();
             smtpClient.Send(email);
+        }
+
+        private string RenderPartialViewToString()
+        {
+            return RenderPartialViewToString(null, null);
+        }
+
+        private string RenderPartialViewToString(string viewName)
+        {
+            return RenderPartialViewToString(viewName, null);
+        }
+
+        private string RenderPartialViewToString(object model)
+        {
+            return RenderPartialViewToString(null, model);
+        }
+
+        private string RenderPartialViewToString(string viewName, object Model) 
+        {
+            if (string.IsNullOrEmpty(viewName))
+                viewName = ControllerContext.RouteData.GetRequiredString("action");
+
+            ViewData.Model = Model;
+
+            using (StringWriter sw = new StringWriter())
+            {
+                ViewEngineResult viewResult = ViewEngines.Engines.FindPartialView(ControllerContext, viewName);
+                ViewContext viewContext = new ViewContext(ControllerContext, viewResult.View, ViewData, TempData, sw);
+                viewResult.View.Render(viewContext, sw);
+                return sw.GetStringBuilder().ToString();
+            }
         }
 
         private static bool ValidateEmail(string email)
@@ -263,7 +226,6 @@
                 ErrorMessage = errorMessage
             };
         }
-
     }
 
     public class JsonErrorModel

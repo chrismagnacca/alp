@@ -1,5 +1,10 @@
 ﻿#index-slideshow {
-    background: url('/Content/Images/subtle-light-patterns.jpg');
+    background-color:#f9f9f9;
+}
+.slidesjs-container{
+    border-style:solid;
+    border-width:2px;
+
 }
 
 .picture-carousel {
@@ -13,12 +18,51 @@
     max-height: 48.000em;
 }
 
+.mission-wrapper {
+    padding-left: 1.250em;
+    padding-right: 1.250em;
+    background-color: #ea841f;
+    color: #FFFFFF;
+    height: 280px;
+    max-height: 280px;
+    box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4)
+}
+
+.hours-wrapper {
+    max-width: 235px;
+    text-align: center;
+    background-color: #aac300;
+    color: #f8f5ec;
+    box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4)
+}
+
+.dark {
+    background-color: #434750;
+}
+
+.orange {
+   background-color: #ea841f; 
+}
+
+.aquamarine {
+    background-color: #81b3b2;
+}
+
+.red {
+    background-color: #f36235;
+}
+
+.gray {
+    background-color: #f8f5ec;
+}
+
 .line-break {
     border-bottom: 1px solid #d8d8d8;
 }
 
 #index-footer {
     width: 100%;
+    background-color: #1b8cb6;
 }
 
 div.slidesjs-container {
