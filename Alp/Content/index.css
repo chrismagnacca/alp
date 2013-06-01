@@ -92,7 +92,7 @@ div#footer {
     overflow: hidden;
 }
 
-.slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px }
+.slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px; background-color: #f9f9f9  }
 
 .slidesjs-pagination li a:hover { background-position: 0 -26px }
 
