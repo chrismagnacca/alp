@@ -52,19 +52,19 @@
                 } else {
                     $("#success-modal").modal("show");
 
-                    $('#FullChildName').val() = "";
-                    $('#DOB').val() = "";
-                    $('.malefemale.active').val() = "";
-                    $('#Address').val() = "";
-                    $('#City').val() = "";
-                    $('#Zip').val() = "";
-                    $('#AgeChild').val() = "";
-                    $('#Guardians').val() = "";
-                    $('#Telephone').val() = "";
-                    $('#Email').val() = "";
-                    $('.enrollment.active').val() = "";
-                    $('.extended-care.active').val() = "";
-                    $('#DaysTimes').val() = "";
+                    $('#FullChildName').val("");
+                    $('#DOB').val("");
+                    $('.malefemale.active').val("");
+                    $('#Address').val("");
+                    $('#City').val("");
+                    $('#Zip').val("");
+                    $('#AgeChild').val("");
+                    $('#Guardians').val("");
+                    $('#Telephone').val("");
+                    $('#Email').val("");
+                    $('.enrollment.active').val("");
+                    $('.extended-care.active').val("");
+                    $('#DaysTimes').val("");
                 }
 
             },

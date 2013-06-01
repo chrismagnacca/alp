@@ -35,10 +35,10 @@
                 } else {
                     $("#success-modal").modal("show");
 
-                    $('#Name').val() = "";
-                    $('#Return').val() = "";
-                    $('#Subject').val() = "";
-                    $('#Message').val() = "";
+                    $('#Name').val("");
+                    $('#Return').val("");
+                    $('#Subject').val("");
+                    $('#Message').val("");
                 }
 
 
