@@ -31,29 +31,9 @@
 .hours-wrapper {
     max-width: 235px;
     text-align: center;
-    background-color: #aac300;
-    color: #f8f5ec;
+    background-color: #afc32f;
+    color: #FFFFFF;
     box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4)
-}
-
-.dark {
-    background-color: #434750;
-}
-
-.orange {
-   background-color: #ea841f; 
-}
-
-.aquamarine {
-    background-color: #81b3b2;
-}
-
-.red {
-    background-color: #f36235;
-}
-
-.gray {
-    background-color: #f8f5ec;
 }
 
 .line-break {
