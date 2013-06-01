@@ -103,8 +103,10 @@
             {
                 From = new MailAddress(sanitizedReturnEmail),
                 Subject = sanitizedSubject,
-                Body = sanitizedMessage,
+                Body = sanitizedMessage
             };
+
+            emailMessage.To.Add("chrismagnacca@gmail.com");
 
             SendEmail(emailMessage);
 

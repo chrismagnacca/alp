@@ -50,7 +50,7 @@
                 if (data["ErrorCode"] == -1) {
                     $('#error-modal').modal('show');
                 } else {
-                    $("#success-modal").dialog("open");
+                    $("#success-modal").modal("show");
 
                     $('#FullChildName').val() = "";
                     $('#DOB').val() = "";
