@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Contact Us";
 }
-<script type="text/javascript" src="~/Scripts/contact-us.js"></script>
+
 
 <div class="contact-us-container">
     <div class="get-in-touch">
@@ -69,4 +69,39 @@
             </div>
         </div>
     </div>
+
+    <div id="sucess-modal" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+             <i class="icon-2x icon-check-sign" style="color:#000000;"></i><h2>Message Sent</h2>
+        </div>
+        <div class="modal-body">
+            <p class="indent">
+                Your message has been sent!                       
+            </p>
+            <p class="indent">We will return your question to the return email entered. Thank you!</p>
+        </div>
+        <div class="modal-footer">
+            <button id="success-close" class="btn modal-close">Close</button>
+        </div>
+    </div>
+
+    <div id="error-modal" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <i class="icon-2x icon-exclamation-sign" style="color:#000000;"></i><h2>Message Error</h2>
+        </div>
+        <div class="modal-body">
+            <p class="indent">            
+                Oops! There has been an error submitting your message. Please verify the return email entered is valid.                         
+            </p>
+            <p class="indent">
+                If this issue persists, please contact Ascension Lutheran Preschool directly. We apologize for any inconvieniance.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button id="error-close" class="btn modal-close">Close</button>
+        </div>
+    </div>
+
 </div>

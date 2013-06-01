@@ -148,6 +148,7 @@
     <Content Include="Content\font-awesome-min.css" />
     <Content Include="Content\fullcalendar.css" />
     <Content Include="Content\fullcalendar-print.css" />
+    <Content Include="Content\Images\animated-overlay.gif" />
     <Content Include="Content\Images\bio.png" />
     <Content Include="Content\Images\debbie_hensler.jpg" />
     <Content Include="Content\Images\janette_gerdeman.jpg" />
@@ -158,6 +159,7 @@
     <Content Include="Content\Images\marie_routman.jpg" />
     <Content Include="Content\Images\mary_lynne.jpg" />
     <Content Include="Content\Images\menubg.png" />
+    <Content Include="Content\Images\tip.png" />
     <Content Include="Content\Images\nancy_antonelli.jpg" />
     <Content Include="Content\Images\rachael_wilshire.jpg" />
     <Content Include="Content\Images\slide-1.jpg" />
@@ -165,6 +167,22 @@
     <Content Include="Content\Images\susan_horton.jpg" />
     <Content Include="Content\Images\ticks.png" />
     <Content Include="Content\Images\ticks_%402X.png" />
+    <Content Include="Content\Images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\Images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\Images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\Images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\Images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\Images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Content\media-queries.css" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\school-calendar.css" />
     <Content Include="Content\site.css" />
@@ -181,6 +199,7 @@
     <Content Include="Content\staff-and-faculty.css" />
     <Content Include="Scripts\additional-methods.js" />
     <Content Include="Scripts\additional-methods.min.js" />
+    <Content Include="Scripts\bootstrap-modal.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\contact-us.js" />
@@ -212,6 +231,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.10.2.custom.min.js" />

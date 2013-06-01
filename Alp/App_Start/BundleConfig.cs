@@ -34,7 +34,9 @@ namespace Alp
                 "~/Content/fullcalendar.css",
                 "~/Content/fullcalendar-print.css",
                 "~/Content/school-calendar.css",
-                "~/Content/contact-us.css"
+                "~/Content/contact-us.css",
+                "~/Content/media-queries.css",
+                "~/Content/jquery-ui-1.10.3.custom.min.css"
                 ));
 
         }

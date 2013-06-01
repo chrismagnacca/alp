@@ -78,6 +78,15 @@ ul li:hover {
     color: #f8f5ec !important;
 }
 
+#dialog-message {
+    background-color: #f9f9f9;
+}
+
+#error-message {
+    background-color: #f9f9f9;
+}
+
+
 .navbar-inner {
     background: none !important;
     border: 0 !important;
@@ -112,7 +121,6 @@ ul li:hover {
 
 div.footer-container {
     width: 100%;
-    /*background: #EEEEEE;*/
 }
 
 
@@ -121,10 +129,10 @@ div.footer-container {
     color: #434750;
 }
 
-    .footer div {
-        text-align: center;
-        font-size: 0.905em;
-    }
+.footer div {
+    text-align: center;
+    font-size: 0.905em;
+}
 
 i {
     padding-right: 0.4em;

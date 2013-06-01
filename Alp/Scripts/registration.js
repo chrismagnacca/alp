@@ -1,4 +1,5 @@
 ﻿$(function () {
+
     $("#DaysTimes").hide();
 
     $("#ExtendedCareYes").on("click", function () {
@@ -45,7 +46,28 @@
             type: 'POST',
             url: '/Home/RegistrationEmail/',
             data: data,
-            success: function (data, textStatus, jqXHR) { },
+            success: function (data, textStatus, jqXHR) {
+                if (data["ErrorCode"] == -1) {
+                    $('#error-modal').modal('show');
+                } else {
+                    $("#success-modal").dialog("open");
+
+                    $('#FullChildName').val() = "";
+                    $('#DOB').val() = "";
+                    $('.malefemale.active').val() = "";
+                    $('#Address').val() = "";
+                    $('#City').val() = "";
+                    $('#Zip').val() = "";
+                    $('#AgeChild').val() = "";
+                    $('#Guardians').val() = "";
+                    $('#Telephone').val() = "";
+                    $('#Email').val() = "";
+                    $('.enrollment.active').val() = "";
+                    $('.extended-care.active').val() = "";
+                    $('#DaysTimes').val() = "";
+                }
+
+            },
             error: function (jqXHR, textStatus, errorThrown) { },
             datatype: 'json'
         });

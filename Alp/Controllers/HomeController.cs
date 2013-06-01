@@ -85,10 +85,10 @@
 
 
         // 
-        // POST: /Home/ContectUsEmail
+        // POST: /Home/ContactUsEmail
 
         [HttpPost]
-        public ActionResult ContectUsEmail(string name, string returnEmail, string subject, string message)
+        public ActionResult ContactUsEmail(string name, string returnEmail, string subject, string message)
         {
             var sanitizedReturnEmail = Sanitize(returnEmail);
 
