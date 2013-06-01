@@ -44,6 +44,14 @@ a, a:visited, a:hover, a:active {
     box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
 }
 
+#map-canvas {
+    box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
+}
+
+.map-container {
+    background-color: #1b8cb6;
+}
+
 ul li:hover {
     background: #0b506c;
 }
