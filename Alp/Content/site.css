@@ -44,6 +44,11 @@ a, a:visited, a:hover, a:active {
     box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
 }
 
+p.indent-center {
+    text-indent: 1.563em;
+    text-align: center;
+}
+
 #map-canvas {
     box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
 }

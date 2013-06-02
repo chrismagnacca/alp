@@ -66,23 +66,30 @@
 
 
         //
-        // POST: /Home/Download
+        // GET: /Home/Download
 
-        public ActionResult Download(string fileName)
+        public ActionResult DownloadFile(int fileId)
         {
-            var sanitizedFileName = Sanitize(fileName);
 
-            if (sanitizedFileName == null)
-                return Json(JsonError(-1, "invalid file name"));
+            var fileName = "";
 
-            var file = Server.MapPath("~/Content/Files/" + sanitizedFileName);
+            switch (fileId)
+            {
+                case 1:
+                    fileName = "2013-2014_registration_form.pdf";
+                    break;
+                case 2:
+                    fileName = "2013-2014_school_calendar.pdf";
+                    break;
+            }
+
+            var file = Server.MapPath("~/Content/Files/" + fileName);
 
             if (System.IO.File.Exists(file))
-                return File("~/Content/Files/" + sanitizedFileName, "application/pdf", sanitizedFileName);
-            else
-                return Json(JsonError(-1, "invalid file name"));
-        }
+                return File("~/Content/Files/" + fileName, "application/pdf", fileName);
 
+            return null;
+        }
 
         // 
         // POST: /Home/ContactUsEmail
@@ -139,13 +146,13 @@
             var sanitizedExtendedCareDaysTimes = Sanitize(extendedCareDaysTimes);
 
             var emailDefinition = new MailDefinition();
-            
+
             emailDefinition.From = sanitizedEmail;
             emailDefinition.IsBodyHtml = true;
             emailDefinition.Subject = "Online Registration: " + sanitizedChildName;
 
             var replacements = new ListDictionary();
-            
+
             replacements.Add("<%NameOfChild%>", sanitizedChildName);
             replacements.Add("<%DateOfBirth%>", sanitizedDateOfBirth);
             replacements.Add("<%Address%>", sanitizedAddress);
@@ -159,10 +166,10 @@
             replacements.Add("<%EnrollmentDays%>", sanitizedEnrollmentDays);
             replacements.Add("<%ExtendedCareInterest%>", sanitizedExtendedCare);
             replacements.Add("<%ExtendedCareTimes%>", sanitizedExtendedCareDaysTimes);
-            
-            string body = RenderPartialViewToString("_RegistrationEmail") ;
 
-            var emailMessage = emailDefinition.CreateMailMessage("chrismagnacca@gmail.com", replacements, body, new System.Web.UI.Control());           
+            string body = RenderPartialViewToString("_RegistrationEmail");
+
+            var emailMessage = emailDefinition.CreateMailMessage("chrismagnacca@gmail.com", replacements, body, new System.Web.UI.Control());
 
             SendEmail(emailMessage);
 
@@ -190,7 +197,7 @@
             return RenderPartialViewToString(null, model);
         }
 
-        private string RenderPartialViewToString(string viewName, object Model) 
+        private string RenderPartialViewToString(string viewName, object Model)
         {
             if (string.IsNullOrEmpty(viewName))
                 viewName = ControllerContext.RouteData.GetRequiredString("action");
