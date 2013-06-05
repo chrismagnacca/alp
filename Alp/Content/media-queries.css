@@ -1,5 +1,5 @@
 ﻿@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
-    /*
+
     body {
         background: #f9f9f9;
     }
@@ -50,10 +50,108 @@
     .slidesjs-next {
         display: none;
     }
-    */
 
 
+    .maximums {
+        text-align: center;
+        background-color: #1b8cb6;
+        color: #FFFFFF;
+    }
 
+    .hours-wrapper, .mission-wrapper {
+            background-color: #1b8cb6;
+        color: #FFFFFF;
+    }
 
+    .hours {
+        padding-left: 2em;
+    }
 
+    div.bio-pic img {
+        padding-left: 2.3em;
+        box-shadow: none;
+    }
+
+    .bio-text {
+        padding-left: 4.75em;
+    }
+
+    .black-bio-text {
+        padding-left: 4.75em;
+    }
+
+    .hours-wrapper h4 {
+        padding-left: 1.9em;
+    }
+
+    #registration-validate input {
+        text-align: center;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    #registration-validate .input-xxlarge {
+        max-width: 90%;
+    }
+
+    #registration-validate .input-large {
+        max-width: 90%;
+    }
+
+    #registration-validate .dob-line, #registration-validate .city-line, #registration-validate .zip-line {
+        width: 85%;
+    }
+
+    #registration-validate .malefemale button {
+        margin-left: 1.2em;
+    }
+
+    #registration-validate .enrollment button {
+        margin-left: 0.5em;
+    }
+        
+    #registration-validate .extcare-title {
+        text-align: center;
+    }
+
+    #registration-validate .extcare button {
+    }
+
+    #registration-validate .span4 {
+        margin-left: 0.5em;
+    }
+
+    #contact-us-form h2 {
+        text-align: center;
+    }
+
+    #contact-us-form input {
+        box-shadow: none;
+        text-align: center;
+    }
+
+    #contact-us-form .name-line, #contact-us-form .return-line, #contact-us-form .subject-line {
+        margin-left: 1.55em;
+    }
+
+    #contact-us-form #Message {
+        margin-left: 1.55em;
+        box-shadow: none;
+        width: 77%;
+    }
+
+    #contact-us-form #Send {
+        margin-left: 1.55em;
+    }
+
+    div.contact-info {
+        text-align: center;
+    }
+
+    .fc-header-title h2 {
+        font-size: 1em;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        vertical-align: central;
+    }
 }
