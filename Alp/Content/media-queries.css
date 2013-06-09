@@ -60,6 +60,8 @@
 
     .hours-wrapper, .mission-wrapper {
         background-color: #1b8cb6;
+        margin-top: 0px;
+        margin-left: 0px;
         color: #FFFFFF;
         font-size: 0.9em;
     }
@@ -83,6 +85,18 @@
 
     .hours-wrapper h4 {
         padding-left: 1.9em;
+    }
+
+    div.bio-pic {
+        margin-right: initial;
+        margin-left: initial;
+    }
+
+    div.bio-pic:not(#Administrator) {
+        width: 200px;
+        margin-left: initial;
+        margin-right: initial;
+
     }
 
     #registration-validate input {
@@ -117,6 +131,24 @@
 
     #registration-validate .extcare button {
     }
+
+    #registration-validate .extcare-title {
+        font-size: 0.9em;
+        margin-left: 0px;
+    }
+
+    #registration-validate #daysenrollment {
+        font-size: 0.9em;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #registration-validate #RegSend {
+     width: 90%;
+     height: 100%;
+     margin-left: 0px;   
+    }
+
 
     #registration-validate .span4 {
         margin-left: 0.5em;
