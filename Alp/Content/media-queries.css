@@ -63,7 +63,7 @@
     .hours-wrapper, .mission-wrapper {
         background-color: #1b8cb6;
         margin-top: 0px !important; 
-        margin-left: 0px !important;
+        margin-left: 0.5em !important;
         color: #FFFFFF;
         font-size: 0.9em;
     }
