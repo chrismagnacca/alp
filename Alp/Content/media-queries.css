@@ -1,4 +1,4 @@
-﻿@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+﻿@media only screen and (max-width: 480px), screen and (max-device-width: 480px) {
 
     body {
         background: #f9f9f9;
@@ -32,8 +32,8 @@
         background-color: #f9f9f9;
         color: #000000;
         box-shadow: none;
-        margin-top: 0px;
-        margin-left: 0px;
+        margin-top: 0px !important; 
+        margin-left: 0px !important;
     }
 
     #index-footer {
@@ -62,8 +62,8 @@
 
     .hours-wrapper, .mission-wrapper {
         background-color: #1b8cb6;
-        margin-top: 0px;
-        margin-left: 0px;
+        margin-top: 0px !important; 
+        margin-left: 0px !important;
         color: #FFFFFF;
         font-size: 0.9em;
     }
@@ -90,14 +90,14 @@
     }
 
     div.bio-pic {
-        margin-right: initial;
-        margin-left: initial;
+        margin-right: initial !important;
+        margin-left: initial !important;
     }
 
     div.bio-pic:not(#Administrator) {
         width: 200px;
-        margin-left: initial;
-        margin-right: initial;
+        margin-left: initial !important;
+        margin-right: initial !important;
 
     }
 
@@ -135,20 +135,20 @@
     }
 
     #registration-validate .extcare-title {
-        font-size: 0.9em;
-        margin-left: 0px;
+        font-size: 0.9em  !important;
+        margin-left: 0px  !important; 
     }
 
     #registration-validate #daysenrollment {
-        font-size: 0.9em;
-        width: 100%;
-        margin-left: 0px;
+        font-size: 0.9em !important; 
+        width: 100% !important;
+        margin-left: 0.5em !important;
     }
 
     #registration-validate #RegSend {
-     width: 90%;
+     width: initial !important; 
      height: 100%;
-     margin-left: 0px;   
+     margin-left: 0.5em !important;   
     }
 
 
@@ -199,7 +199,7 @@
 }
 
 
-@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+@media only screen and (max-width: 800px), screen and (max-device-width: 800px) {
     .slidesjs-pagination {
         display: none;
     }
