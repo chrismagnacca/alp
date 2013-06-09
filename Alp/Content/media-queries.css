@@ -59,8 +59,9 @@
     }
 
     .hours-wrapper, .mission-wrapper {
-            background-color: #1b8cb6;
+        background-color: #1b8cb6;
         color: #FFFFFF;
+        font-size: 0.9em;
     }
 
     .hours {
@@ -146,6 +147,7 @@
 
     div.contact-info {
         text-align: center;
+        font-size: 0.8em;
     }
 
     .fc-header-title h2 {
@@ -154,4 +156,131 @@
         margin-bottom: 1em;
         vertical-align: central;
     }
+
+    div #map-canvas {
+        max-width: 100%;
+        max-height: 300px;
+        box-shadow: none;
+    }
+}
+
+
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+    .slidesjs-pagination {
+        display: none;
+    }
+
+    .slidesjs-previous {
+        display: none;
+    }
+
+    .slidesjs-next {
+        display: none;
+    }
+
+    .hours-wrapper, .mission-wrapper {
+        font-size: 0.9em;
+    }
+
+    .hours-wrapper {
+        text-align: center;
+        margin-top: -50px;
+        margin-left: 250px;
+    }
+
+    .mission-wrapper {
+        margin-left: 25px;
+        margin-right: 25px;
+        max-width: 93%;
+        height: 100%;
+        max-height: 768px;
+    }
+
+    div.bio-pic img {
+        box-shadow: none;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.bio-pic:not(#Administrator) {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    div.black-bio-text {
+        
+    }
+
+    div#Administrator {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bio-text {
+        box-shadow: none;
+    }
+
+     #registration-validate input {
+        text-align: center;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    #registration-validate .input-xxlarge {
+        max-width: 90%;
+    }
+
+    #registration-validate .input-large {
+        max-width: 90%;
+    }
+
+    #registration-validate .dob-line, #registration-validate .city-line, #registration-validate .zip-line {
+        width: 85%;
+    }
+
+    #registration-validate .malefemale button {
+        margin-left: 1.2em;
+    }
+
+    #registration-validate .enrollment button {
+        margin-left: 0.5em;
+    }
+        
+    #registration-validate .extcare-title {
+        font-size: 0.9em;
+        margin-left: 70px;
+    }
+
+    #registration-validate #daysenrollment {
+        font-size: 0.9em;
+        width: 300px;
+        margin-left: 30px;
+    }
+
+    #registration-validate .extcare button {
+    }
+
+    #registration-validate #RegSend {
+     width: 100px;
+     height: 125%;
+     margin-left: 325px;   
+    }
+
+    #registration-validate .span4 {
+        margin-left: 0.5em;
+    }
+    
+    div.contact-info {
+        font-size: 0.8em;
+    }
+
+    div #map-canvas {
+        max-width: 100%;
+        max-height: 480px;
+        box-shadow: none;
+    }
+
 }
