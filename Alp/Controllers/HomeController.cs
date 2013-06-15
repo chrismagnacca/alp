@@ -113,7 +113,7 @@
                 Body = sanitizedMessage
             };
 
-            emailMessage.To.Add("chrismagnacca@gmail.com");
+            emailMessage.To.Add("ascensionpreschool@hotmail.com");
 
             SendEmail(emailMessage);
 
