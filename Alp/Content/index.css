@@ -23,13 +23,13 @@
     padding-right: 1.250em;
     background-color: #ea841f;
     color: #FFFFFF;
-    
-    height: 325px;
+    height: 280px;
+    max-height: 280px;
     box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
 }
 
 .hours-wrapper {
-    height: 325px;
+    height: 280px;
     max-width: 235px;
     text-align: center;
     background-color: #afc32f;
