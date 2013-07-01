@@ -53,33 +53,9 @@
         padding-left: 2em;
     }
 
-    div.bio-pic img {
-        padding-left: 2.3em;
-        box-shadow: none;
-    }
-
-    .bio-text {
-        padding-left: 4.75em;
-    }
-
-    .black-bio-text {
-        padding-left: 4.75em;
-    }
-
     .hours-wrapper h4 {
         padding-left: 1.9em;
     }
-
-    div.bio-pic {
-        margin-right: initial !important;
-        margin-left: initial !important;
-    }
-
-        div.bio-pic:not(#Administrator) {
-            width: 200px;
-            margin-left: initial !important;
-            margin-right: initial !important;
-        }
 
     #registration-validate input {
         text-align: center;
@@ -191,31 +167,6 @@
         display: none;
     }
 
-    div.bio-pic img {
-        box-shadow: none;
-        max-width: 768px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    div.bio-pic:not(#Administrator) {
-        width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    div.black-bio-text {
-    }
-
-    div#Administrator {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .bio-text {
-        box-shadow: none;
-    }
-
     #registration-validate input {
         text-align: center;
         margin-left: 1em;
@@ -279,9 +230,26 @@
 
 /* large desktop */
 @media (min-width: 1200px) {
+    div.bio-pic img {
+        
+        max-width: 768px;
+    }
 
+    div.bio-pic:not(#Administrator) {
+        width: 200px;
+    }
+
+    div#Administrator {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bio-text {
+        box-shadow: none;
+    }
 }
 
+/* smaller desktops */
 @media (min-width: 980px) and (max-width: 1199px) {
     .hours-wrapper {
         font-size: 0.9em;
@@ -290,6 +258,32 @@
     .mission-wrapper {
         font-size: 0.9em;
         max-width: 665px
+    }
+    
+    div.bio-pic img {
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: none;
+        width: 160px;
+    }
+
+    div.bio-pic:not(#Administrator) {
+        width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 50px;
+    }
+
+    div#Administrator {
+        
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .bio-text {
+        font-size: 0.9em;
+        box-shadow: none;
     }
 }
 
@@ -309,6 +303,30 @@
         max-height: initial;
         height: 100%;
     }
+
+    div.bio-pic img {
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: none;
+        width: 135px;
+    }
+
+    div.bio-pic:not(#Administrator) {
+        width: 135px;
+        padding-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div#Administrator {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bio-text {
+        font-size: 0.9em;
+        box-shadow: none;
+    }
 }
 
 /* Landscape phone to portrait tablet */
@@ -327,6 +345,37 @@
         max-height: initial;
         height: 100%;
     }
+    
+    div.bio-pic img {
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: none;
+        width: 120px;
+    }
+
+    div.bio-pic:not(#Administrator) {
+        width: 120px;
+        padding-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bio-pic:not(#Administrator) {
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    div#Administrator {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .bio-text {
+        font-size: 0.9em;
+        box-shadow: none;
+    }
 }
 
 /* Landscape phones and down */
@@ -336,5 +385,19 @@
     }
 
     .mission-wrapper {
+    }
+
+    div.bio-pic img {
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: none;
+        width: 120px;
+    }
+
+    div.bio-pic:not(#Administrator) {
+        width: 140px;
+        padding-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
