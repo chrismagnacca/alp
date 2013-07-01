@@ -32,7 +32,7 @@
         background-color: #f9f9f9;
         color: #000000;
         box-shadow: none;
-        margin-top: 0px !important; 
+        margin-top: 0px !important;
         margin-left: 0px !important;
     }
 
@@ -62,7 +62,7 @@
 
     .hours-wrapper, .mission-wrapper {
         background-color: #1b8cb6;
-        margin-top: 0px !important; 
+        margin-top: 0px !important;
         margin-left: 0.5em !important;
         color: #FFFFFF;
         font-size: 0.9em;
@@ -94,12 +94,11 @@
         margin-left: initial !important;
     }
 
-    div.bio-pic:not(#Administrator) {
-        width: 200px;
-        margin-left: initial !important;
-        margin-right: initial !important;
-
-    }
+        div.bio-pic:not(#Administrator) {
+            width: 200px;
+            margin-left: initial !important;
+            margin-right: initial !important;
+        }
 
     #registration-validate input {
         text-align: center;
@@ -126,7 +125,7 @@
     #registration-validate .enrollment button {
         margin-left: 0.5em;
     }
-        
+
     #registration-validate .extcare-title {
         text-align: center;
     }
@@ -135,20 +134,20 @@
     }
 
     #registration-validate .extcare-title {
-        font-size: 0.9em  !important;
-        margin-left: 0px  !important; 
+        font-size: 0.9em !important;
+        margin-left: 0px !important;
     }
 
     #registration-validate #daysenrollment {
-        font-size: 0.9em !important; 
+        font-size: 0.9em !important;
         width: 100% !important;
         margin-left: 0.5em !important;
     }
 
     #registration-validate #RegSend {
-     width: initial !important; 
-     height: 100%;
-     margin-left: 0.5em !important;   
+        width: initial !important;
+        height: 100%;
+        margin-left: 0.5em !important;
     }
 
 
@@ -198,8 +197,23 @@
     }
 }
 
+@media only screen and (max-width: 960px), screen and (max-device-width: 960px) {
+    .mission-wrapper {
+        width: 100%;
+        height: 100%;
+        max-height: 768px;
+        max-width: 500px;
+        margin-right: auto !important;
+        margin-left: 20px;
+    }
 
-@media only screen and (max-width: 800px), screen and (max-device-width: 800px) {
+    .hours-wrapper {
+        margin-bottom: 40px;
+        margin-left: 200px !important;
+    }
+}
+
+@media only screen and (max-width: 1279px), screen and (max-device-width: 1279px) {
     .slidesjs-pagination {
         display: none;
     }
@@ -218,16 +232,19 @@
 
     .hours-wrapper {
         text-align: center;
-        margin-top: -50px;
-        margin-left: 250px;
+        margin-top: 0px;
+        width: 200px;
+        height: 300px;
+        
+        margin-right: auto !important;
     }
 
     .mission-wrapper {
-        margin-left: 25px;
-        margin-right: 25px;
-        max-width: 93%;
+        width: 560px;
         height: 100%;
         max-height: 768px;
+        max-width: 500px;
+        margin-right: auto !important;
     }
 
     div.bio-pic img {
@@ -241,11 +258,9 @@
         width: 200px;
         margin-left: auto;
         margin-right: auto;
-
     }
 
     div.black-bio-text {
-        
     }
 
     div#Administrator {
@@ -257,7 +272,7 @@
         box-shadow: none;
     }
 
-     #registration-validate input {
+    #registration-validate input {
         text-align: center;
         margin-left: 1em;
         margin-right: 1em;
@@ -282,7 +297,7 @@
     #registration-validate .enrollment button {
         margin-left: 0.5em;
     }
-        
+
     #registration-validate .extcare-title {
         font-size: 0.9em;
         margin-left: 70px;
@@ -298,15 +313,15 @@
     }
 
     #registration-validate #RegSend {
-     width: 100px;
-     height: 125%;
-     margin-left: 325px;   
+        width: 100px;
+        height: 125%;
+        margin-left: 325px;
     }
 
     #registration-validate .span4 {
         margin-left: 0.5em;
     }
-    
+
     div.contact-info {
         font-size: 0.8em;
     }
@@ -316,5 +331,4 @@
         max-height: 480px;
         box-shadow: none;
     }
-
 }
