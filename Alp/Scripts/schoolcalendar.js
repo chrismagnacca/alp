@@ -173,7 +173,7 @@
             {
                 title: "Spring Vacation (No School)",
                 start: new Date("April 14, 2014 9:00"),
-                end: new Date("April 18, 2014 17:00"),
+                end: new Date("April 21, 2014 17:00"),
                 className: 'cal-event',
             },
             {
