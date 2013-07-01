@@ -297,13 +297,13 @@
 @media (min-width: 768px) and (max-width: 979px) {
     .hours-wrapper {
         width: 240px;
-        height: 400px;
-        margin-left: auto;
+        height: 410px;
+        margin-left: 20px;
         margin-right: auto;
     }
 
     .mission-wrapper {
-        max-width: 440px;
+        max-width: 430px;
         margin-right: auto;
         margin-left: 20px;
         max-height: initial;
