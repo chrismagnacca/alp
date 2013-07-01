@@ -284,10 +284,11 @@
 
 @media (min-width: 980px) and (max-width: 1199px) {
     .hours-wrapper {
-    
+        font-size: 0.9em;
     }
     
     .mission-wrapper {
+        font-size: 0.9em;
         max-width: 665px
     }
 }
@@ -313,11 +314,13 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
     .hours-wrapper {
+        font-size: 0.9em;
         margin-left: auto;
         margin-right: auto;
     }
 
     .mission-wrapper {
+        font-size: 0.9em;
         max-width: 600px;
         margin-right: auto;
         margin-left: auto;
