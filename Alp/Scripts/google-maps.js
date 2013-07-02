@@ -30,5 +30,6 @@
 
 
     marker.setMap(map);
+    infowindow.open(map, marker);
 }
 google.maps.event.addDomListener(window, 'load', initialize);
