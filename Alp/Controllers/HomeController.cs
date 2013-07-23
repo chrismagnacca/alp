@@ -169,7 +169,7 @@
 
             string body = RenderPartialViewToString("_RegistrationEmail");
 
-            var emailMessage = emailDefinition.CreateMailMessage("chrismagnacca@gmail.com", replacements, body, new System.Web.UI.Control());
+            var emailMessage = emailDefinition.CreateMailMessage("ascensionpreschool@hotmail.com", replacements, body, new System.Web.UI.Control());
 
             SendEmail(emailMessage);
 
