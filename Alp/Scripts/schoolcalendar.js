@@ -218,6 +218,12 @@
                 className: 'cal-event',
             },
             {
+                title: "Open House",
+                start: new Date("August 27, 2014 17:30"),
+                end: new Date(" August 27, 2014 19:00"),
+                className: 'cal-event',
+            },
+            {
                 title: "Get Acquainted Day",
                 start: new Date("September 2, 2014 9:00"),
                 className: 'cal-event',
