@@ -32,10 +32,10 @@ p.indent {
     color: #f9f9f9;
 }
 
-    .message-us-container input {
-        box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
-    }
+.message-us-container input {
 
-    .message-us-container textarea {
-        box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
-    }
+}
+
+.message-us-container textarea {
+
+}

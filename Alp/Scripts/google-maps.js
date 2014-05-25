@@ -22,12 +22,11 @@
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        title: "Hello World!"
+        title: ""
     });
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
     });
-
 
     marker.setMap(map);
 }

@@ -19,12 +19,10 @@ div.spacer {
 
 h2 {
     text-align: center;
-    text-shadow: -0.075em 0.075em 0 rgba(20,20,20,0.25);
 }
 
 .main-heading {
     color: #434750;
-    text-shadow: -0.075em 0.075em 0 rgba(20,20,20,0.25);
 }
 
 a, a:visited, a:hover, a:active {
@@ -37,7 +35,6 @@ a, a:visited, a:hover, a:active {
 }
 
 .registration-form-container input {
-    box-shadow: -0.4em 0.4em 0 rgba(20,20,20,0.4);
 }
 
 .registration-form-container .btn-group {

@@ -150,8 +150,8 @@
     <Content Include="Content\fullcalendar-print.css" />
     <Content Include="Content\Images\animated-overlay.gif" />
     <Content Include="Content\Images\bio.png" />
-    <Content Include="Content\Images\debbie_hensler.jpg" />
     <Content Include="Content\Images\dottie_honaker.jpg" />
+    <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Images\janette_gerdeman.jpg" />
     <Content Include="Content\Images\judi_flanagan.jpg" />
     <Content Include="Content\Images\katie_finch.jpg" />
@@ -160,7 +160,6 @@
     <Content Include="Content\Images\mary_lynne.jpg" />
     <Content Include="Content\Images\menubg.png" />
     <Content Include="Content\Images\tip.png" />
-    <Content Include="Content\Images\nancy_antonelli.jpg" />
     <Content Include="Content\Images\rachael_wilshire.jpg" />
     <Content Include="Content\Images\slide-1.jpg" />
     <Content Include="Content\Images\subtle-light-patterns.jpg" />
@@ -230,6 +229,7 @@
     <Content Include="Content\Files\2013-2014_school_calendar.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Files\2014-2015_school_calendar.pdf" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />

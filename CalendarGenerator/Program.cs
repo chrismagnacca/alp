@@ -12,7 +12,7 @@ namespace CalendarGenerator
         public static void Main(string[] args)
         {
             var line = "";
-            var file = new StreamReader("2013-2014_school_calendar.txt");
+            var file = new StreamReader("2014-2015_school_calendar.txt");
             var output = new StreamWriter("calendar.js");
 
             while ((line = file.ReadLine()) != null) {
