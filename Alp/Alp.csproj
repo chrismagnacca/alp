@@ -159,9 +159,10 @@
     <Content Include="Content\Images\leigh_plymale.jpg" />
     <Content Include="Content\Images\mary_lynne.jpg" />
     <Content Include="Content\Images\menubg.png" />
+    <Content Include="Content\Images\slide-1.jpg" />
+    <Content Include="Content\Images\slide-2.jpg" />
     <Content Include="Content\Images\tip.png" />
     <Content Include="Content\Images\rachael_wilshire.jpg" />
-    <Content Include="Content\Images\slide-1.jpg" />
     <Content Include="Content\Images\subtle-light-patterns.jpg" />
     <Content Include="Content\Images\susan_horton.jpg" />
     <Content Include="Content\Images\ticks.png" />
@@ -189,7 +190,6 @@
     <Content Include="Content\Images\glyphicons-halflings-white.png" />
     <Content Include="Content\Images\glyphicons-halflings.png" />
     <Content Include="Content\Images\pagination.png" />
-    <Content Include="Content\Images\slide-2.jpg" />
     <Content Include="Content\Images\slide-3.jpg" />
     <Content Include="Content\Images\slide-4.jpg" />
     <Content Include="Content\Images\slide-5.jpg" />
