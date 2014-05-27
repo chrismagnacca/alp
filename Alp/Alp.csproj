@@ -230,6 +230,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Files\2014-2015_school_calendar.pdf" />
+    <Content Include="Content\Files\2014-2015_registration_form.pdf" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
