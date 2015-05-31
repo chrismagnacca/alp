@@ -76,10 +76,10 @@
             switch (fileId)
             {
                 case 1:
-                    fileName = "2014-2015_registration_form.pdf";
+                    fileName = "2015-2016_registration_form.pdf";
                     break;
                 case 2:
-                    fileName = "2014-2015_school_calendar.pdf";
+                    fileName = "2015-2016_school_calendar.pdf";
                     break;
             }
 
