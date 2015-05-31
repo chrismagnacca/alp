@@ -12,11 +12,16 @@ namespace CalendarGenerator
         public static void Main(string[] args)
         {
             var line = "";
-            var file = new StreamReader("2014-2015_school_calendar.txt");
+            var file = new StreamReader("2015-2016_school_calendar.txt");
             var output = new StreamWriter("calendar.js");
 
             while ((line = file.ReadLine()) != null) {
+                System.Console.WriteLine("line number: " + line);
                 var results = line.Split('|');
+                
+                if (results[0] == "")
+                    break;
+
                 output.WriteLine("{");
                 output.WriteLine("title: \"" + results[0] + "\",");
                 output.WriteLine("start: new Date(\"" + results[1] + "\"),");
